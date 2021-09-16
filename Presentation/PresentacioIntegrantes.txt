@@ -7,3 +7,7 @@ máximo posible.
 Robert Buitrago: Hola, mi nombre es Robert Buitrago Rodriguez, tengo 37 años y siempre estuve interesado en el ámbito
 de la programación, pues mi carrera es afin con ello, vivo en la ciudad de Cucuta, y considero que tengo desarrollada
 una buena lógica para la realizacion de procesos. Algún día planeo estudiar también Ingeniería de Sistemas.
+
+Daniel Garay: Hola! mi nombre es Daniel Garay y soy ingeniero civil de la ciudad de Bogota. Estoy muy interesado en
+programacion porque ofrece incontables herramientas para la soulucion de problemas. Me gustaria algun dia poder usar 
+estas herramientas en mi ambito laboral.
