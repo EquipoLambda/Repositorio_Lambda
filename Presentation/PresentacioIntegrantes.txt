@@ -11,3 +11,8 @@ una buena lógica para la realizacion de procesos. Algún día planeo estudiar t
 Daniel Garay: Hola! mi nombre es Daniel Garay y soy ingeniero civil de la ciudad de Bogota. Estoy muy interesado en
 programacion porque ofrece incontables herramientas para la soulucion de problemas. Me gustaria algun dia poder usar 
 estas herramientas en mi ambito laboral.
+
+Jasmin Fuquen: ¡Hola! mucho gusto mi nombre es Jasmin Fuquen vivo en Zipaquira, soy Tecnologa en analisis y desarrollo 
+de sistemas de informacion trabajo para la empresa GDE Internacional, mis intereses personales son la Programacion, 
+Bellas Artes y todo con relacion a la ayuda de animalitos sin hogar,las expectativas que tengo con el curso es aprender 
+mas sobre la tecnologia que se esta trabajando en el mercado a nivel de programacion y mejorar a nivel profesional.
