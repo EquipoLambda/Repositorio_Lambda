@@ -6,41 +6,42 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
 
-<div class="container mt-4"   >
-    
+<div class="container mt-4">
 
-<div id="fondo" class="card">
-<article class="card-body mx-auto" style="max-width: 400px;">
-	<h3 class="card-title mt-3 text-center">Crear Rol</h3>
-	<p class="text-center">Llene cuidadosamente todos los campos.</p>
-	<form>
-	<div class="form-group input-group">
-		<div class="input-group-prepend">
-		    <span id="fondoicono" class="input-group-text"> <i class="fa fa-user"></i> </span>
-		 </div>
-        <input name="" class="form-control" placeholder="Nombre del Rol" type="text">
-    </div> <!-- form-group// -->
-	<div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span id="fondoicono" class="input-group-text"> <i class="fa fa-check-square"></i> </span>
-		</div>
-		<select class="form-control">
-			<option>Activo</option>
-			<option>Inactivo</option>
-		</select>
-	</div> <!-- form-group end.// -->   
-	 <div class="row">
-		 <div class="col-sm-6">
-			<button type="submit" class="btn btn-warning btn-block btn-colores"> Crear cuenta  </button>
-		 </div>
-		 <div class="col-sm-6">
-			<button type="submit" class="btn btn-danger btn-block"> Cancelar </button>
-		 </div>
-    </div> <!-- row end// -->  
-    <p class="text-center">¿El rol ya fue creado? <a href="">Buscar Rol</a> </p>                                                                 
-</form>
-</article>
-</div> <!-- card.// -->
 
-</div> 
+  <div id="fondo" class="card">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+      <h3 class="card-title mt-3 text-center">Crear Rol</h3>
+      <p class="text-center">Llene cuidadosamente todos los campos.</p>
+      <form>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span id="fondoicono" class="input-group-text"> <i class="fa fa-user"></i> </span>
+          </div>
+          <input name="" class="form-control" placeholder="Nombre del Rol" type="text">
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span id="fondoicono" class="input-group-text"> <i class="fa fa-check-square"></i> </span>
+          </div>
+          <select class="form-control">
+            <option selected>Pendiente</option>
+            <option>Autorizado</option>
+            <option>No Autorizado</option>
+          </select>
+        </div> <!-- form-group end.// -->
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="submit" class="btn btn-warning btn-block btn-colores"> Crear cuenta </button>
+          </div>
+          <div class="col-sm-6">
+            <button type="submit" class="btn btn-danger btn-block"> Cancelar </button>
+          </div>
+        </div> <!-- row end// -->
+        <p class="text-center">¿El rol ya fue creado? <a href="">Buscar Rol</a> </p>
+      </form>
+    </article>
+  </div> <!-- card.// -->
+
+</div>
 <!--container end.//-->
