@@ -35,3 +35,33 @@
     border-color: #e3b04b;
     color: white;
 }
+
+//Tabla
+.table-wrapper {
+    border: 1px solid white;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background: white;
+    padding: 2px;
+}
+table.table {
+    table-layout: auto;
+}
+table.table tr th, table.table tr td {
+    border-color: #e3b04b;
+}
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+table.table td a {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0px;
+    min-width: 24px;
+}    

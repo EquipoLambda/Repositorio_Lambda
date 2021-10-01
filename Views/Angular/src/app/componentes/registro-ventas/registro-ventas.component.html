@@ -1,78 +1,118 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <!------ Include the above in your HEAD tag ---------->
 
 
 <link rel="stylesheet" href="https://use.fontawesome.com/45d79a32aa.css">
 
 
-<div class="container mt-4"   >
-    
+<div class="container mt-4">
 
-<div id="fondo" class="card">
-<article class="card-body mx-auto" style="max-width: 400px;">
-	<h3 class="card-title mt-3 text-center">Registrar Nueva Venta</h3>
-	<p class="text-center">Llene cuidadosamente todos los campos para registrar una venta</p>
-	<form>
-    <div class="form-group input-group">
-        <div class="input-group-prepend">
-            <span id="fondoicono" class="input-group-text"> <i class="fa fa-calendar"></i> </span>
-        </div>
-        <input name="" class="form-control" placeholder="Fecha de la venta" type="text">
-    </div> <!-- form-group// -->
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span id="fondoicono" class="input-group-text"> <i class="fa fa-key"></i> </span>
-		 </div>
-        <input name="" class="form-control" placeholder="Identificador único de la venta" type="text">
-    </div> <!-- form-group// -->               
-	<div class="form-group input-group">
-		<div class="input-group-prepend">
-		    <span id="fondoicono" class="input-group-text"> <i class="fa fa-user-o"></i> </span>
-		 </div>
-        <input name="" class="form-control" placeholder="ID del vendedor encargado" type="text">
-    </div> <!-- form-group// -->
-    <div class="form-group input-group">
-		<div class="input-group-prepend">
-		    <span id="fondoicono" class="input-group-text"> <i class="fa fa-user"></i> </span>
-		 </div>
-        <input name="" class="form-control" placeholder="Nombre del cliente" type="text">
-    </div> <!-- form-group// -->
-    <div class="form-group input-group">
-		<div class="input-group-prepend">
-		    <span id="fondoicono" class="input-group-text"> <i class="fa fa-id-card"></i> </span>
-		 </div>
-        <input name="" class="form-control" placeholder="Documento de identificación del cliente" type="text">
-    </div> <!-- form-group// -->
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span id="fondoicono" class="input-group-text"> <i class="fa fa-list-ol"></i> </span>
-		 </div>
-        <input name="" class="form-control" placeholder="Producto a registrar" type="text">
-    </div> <!-- form-group// -->
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span id="fondoicono" class="input-group-text"> <i class="fa fa-plus-square"></i> </span>
-		 </div>
-        <input name="" class="form-control" placeholder="Cantidad del producto seleccionado" type="text">
-    </div> <!-- form-group// -->
-    <div class="form-group">
-        <button type="submit" class="btn btn-warning btn-block btn-colores"> Agregar productos al total </button>
-    </div> <!-- form-group// -->  
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span id="fondoicono" class="input-group-text"> <i class="fa fa-money"></i> </span>
-		 </div>
-        <input name="" class="form-control" placeholder="Total de la venta" type="text">
-    </div> <!-- form-group// -->
-    <div class="form-group">
-        <button type="submit" class="btn btn-warning btn-block btn-colores"> Registrar venta </button>
-    </div> <!-- form-group// -->  
-	<p class="text-center"><a href="" style="color:red">Cancelar</a> </p>                                                               
-</form>
-</article>
-</div> <!-- card.// -->
 
-</div> 
+    <div id="fondo" class="card">
+        <article class="card-body mx-auto" style="width: 750px;">
+            <h3 class="card-title mt-3 text-center">Registrar Nueva Venta</h3>
+            <p class="text-center">Llene cuidadosamente todos los campos para registrar una nueva venta</p>
+            <form>
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span id="fondoicono" class="input-group-text"> <i class="fa fa-calendar"></i> </span>
+                            </div>
+                            <input name="" class="form-control" placeholder="Fecha de la venta" type="text">
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span id="fondoicono" class="input-group-text"> <i class="fa fa-user-o"></i> </span>
+                            </div>
+                            <input name="" class="form-control" placeholder="Nombre del vendedor encargado" type="text">
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span id="fondoicono" class="input-group-text"> <i class="fa fa-id-card-o"></i> </span>
+                            </div>
+                            <input name="" class="form-control" placeholder="ID del vendedor encargado" type="text">
+                        </div> <!-- form-group// -->
+                    </div>
+                    <div class="col-6 text-center">
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span id="fondoicono" class="input-group-text"> <i class="fa fa-key"></i> </span>
+                            </div>
+                            <input name="" class="form-control" placeholder="Identificador único de la venta"
+                                type="text">
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span id="fondoicono" class="input-group-text"> <i class="fa fa-user"></i> </span>
+                            </div>
+                            <input name="" class="form-control" placeholder="Nombre del cliente" type="text">
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span id="fondoicono" class="input-group-text"> <i class="fa fa-id-card"></i> </span>
+                            </div>
+                            <input name="" class="form-control" placeholder="Documento de identidad del cliente"
+                                type="text">
+                        </div> <!-- form-group// -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="table-wrapper table-center">
+                        <table class="table table-stripped">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>ID</th>
+                                    <th>Cantidad</th>
+                                    <th>Valor unitario</th>
+                                    <th>Valor total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Primer producto</td>
+                                    <td>00001</td>
+                                    <td>4</td>
+                                    <td>$5000</td>
+                                    <td>$20000</td>
+                                </tr>
+                                <tr>
+                                    <td>Segundo producto</td>
+                                    <td>00002</td>
+                                    <td>3</td>
+                                    <td>$2000</td>
+                                    <td>$6000</td>
+                                </tr>
+                                <tr>
+                                    <td>Tercer producto</td>
+                                    <td>00003</td>
+                                    <td>1</td>
+                                    <td>$4000</td>
+                                    <td>$4000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-warning btn-block btn-colores"> Agregar productos al total </button>
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span id="fondoicono" class="input-group-text"> <i class="fa fa-money"></i> </span>
+                    </div>
+                    <input name="" class="form-control" placeholder="Total de la venta" type="text">
+                </div> <!-- form-group// -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-warning btn-block btn-colores"> Registrar venta </button>
+                </div> <!-- form-group// -->
+                <p class="text-center"><a href="" style="color:red">Cancelar</a> </p>
+            </form>
+        </article>
+    </div> <!-- card.// -->
+</div>
 <!--container end.//-->
