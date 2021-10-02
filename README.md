@@ -34,7 +34,7 @@ Tal y como se tiene el proyecto actualmente, la creación de usuarios tendría q
 
 Se crea la interfaz para crear un nuevo usuario teniendo en cuenta los requerimientos del Sprint 2. Las interfaces contienen toda la información necesaria en cuanto a atributos obligatorios. Aún queda la posibilidad de ocultar algunos atributos como las contraseñas de la creación de usuario en caso de que se decida realizar la autenticación únicamente con Gmail como se plantea en el proyecto; de igual manera, en cuanto al funcionamiento interno del estado del usuario, se podría dejar la opción de asignarla durante la creación del usuario en caso de que la realice un administrador o de ocultar esta parte y dejarla por defecto como "pendiente de autorización".
 
-La creación de la interfaz en React se basó en la interfaz que ya tenía creada Juan Camilo Caicedo en Angular. La migración se realizó...
+La creación de la interfaz en React se basó en la interfaz que ya tenía creada Juan Camilo Caicedo en Angular. posteriormente se migra esta interfaz por parte de Andrés García ajustando el código requerido por React manteniendo su diseño y sus funcionalidades, la migración del código base desarrollado para ser ejecutado en Angular a React se realizó sin inconvenientes mayores a excepción de alguna propiedad html como el color de los iconos o alguna característica particular de la sintaxis de cada framework
 
 -Interfaz de Editar Usuario a cargo de Mauricio Rivas (React) COPIAR QUE LA BASE DE ANGULAR LA REALIZÓ DANIEL GARAY (DESERTOR)
 
@@ -58,7 +58,9 @@ Se crea la interfaz para editar ventas tomando como base la que se realizó para
 
 -Interfaz de Listar Ventas a cargo de Jasmin Fuquen
 
--Interfaz de Crear Rol a cargo de Andrés García (React) COPIAR QUE LA BASE DE ANGULAR LA REALIZÓ JASMIN FUQUEN
+-Interfaz de Crear Rol a cargo de Andrés García (React) 
+
+Inicialmente Jasmin Fuquen crea en Angular la interfaz para Crear un nuevo rol teniendo en cuenta los requerimientos del Sprint 2. Las interfaz contienen toda la información necesaria en cuanto a atributos para ingresar un nuevo rol y su respectiva descripción, posteriormente se migra esta interfaz por parte de Andrés García ajustando el código requerido por React manteniendo su diseño y sus funcionalidades, la migración del código base desarrollado para ser ejecutado en Angular a React se realizó sin inconvenientes mayores a excepción de alguna propiedad html como el color de los iconos o alguna característica particular de la sintaxis de cada framework
 
 -Interfaz de Editar Rol a cargo de Mauricio Rivas (React) COPIAR QUE LA BASE DE ANGULAR LA REALIZÓ JASMIN FUQUEN
 
