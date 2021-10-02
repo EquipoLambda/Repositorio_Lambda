@@ -1,17 +1,15 @@
-# Repositorio_Lambda
-
 # Número de grupo en Whatsapp
 
 Grupo 3 (Equipo Lambda)
 
 # Integrantes activos
-Juan Camilo Caicedo; 1143871845 
-Juan Sebastián Lindo; 1020746091
-Jasmin Fuquen; 1075685565
-Mauricio Rivas; 1014296110 
-Karen González;  52973086
-Andrés García; 1116238326
-Victoria Andrea Vasquez; 25102981
+Juan Camilo Caicedo (1143871845); 
+Juan Sebastián Lindo (1020746091); 
+Jasmin Fuquen (1075685565); 
+Mauricio Rivas (1014296110); 
+Karen González (52973086); 
+Andrés García (1116238326); 
+Victoria Andrea Vasquez (25102981); 
 
 # Link de trello
 https://trello.com/b/KQu7KE77/lambda
