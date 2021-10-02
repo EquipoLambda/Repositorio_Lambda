@@ -171,34 +171,34 @@
 }
 .badge-primary {
   background: #5c1e17;
-  color: #ffffff;
+  color: #e3b04b;
 }
 .badge-success {
   background: #28a745;
-  color: #ffffff;
+  color: #e3b04b;
 }
 .badge-info {
   background: #03a9f4;
-  color: #ffffff;
+  color: #e3b04b;
 }
 .badge-warning {
   background: #e7b63a;
-  color: #ffffff;
+  color: #e3b04b  ;
 }
 .badge-danger {
   background: #dc3545;
-  color: #ffffff;
+  color: #e3b04b  ;
 }
 .badge-pink {
   background: #e6a1f2;
-  color: #ffffff;
+  color: #e3b04b  ;
 }
 .badge-dark {
   background: #545454;
-  color: #ffffff;
+  color: #e3b04b  ;
 }
 span.badge {
-  color: #ffffff;
+  color: #e3b04b  ;
   font-size: 14px;
 }
 .vtabs {
@@ -236,7 +236,7 @@ span.badge {
   -moz-border-left-colors: none;
   -moz-border-right-colors: none;
   -moz-border-top-colors: none;
-  background: #ffffff none repeat scroll 0 0;
+  background: #ffe3b04b  ffff none repeat scroll 0 0;
   border-color: currentcolor #1976d2 currentcolor currentcolor;
   border-image: none;
   border-style: none solid none none;
@@ -412,7 +412,7 @@ span.badge {
 .dt-buttons .dt-button.active {
   background-image: none;
   background: #5873fe;
-  color: #ffffff;
+  color: #e3b04b  ;
 }
 button.dt-button:hover:not(.disabled),
 div.dt-button:hover:not(.disabled),
@@ -442,7 +442,7 @@ a.dt-button.active:hover:not(.disabled):not(.disabled) {
   background-image: none;
   border: 1px solid #5873fe;
   box-shadow: none;
-  color: #ffffff;
+  color: #e3b04b  ;
 }
 button.dt-button:active:not(.disabled),
 button.dt-button.active:not(.disabled),
@@ -454,7 +454,7 @@ a.dt-button.active:not(.disabled) {
   background-image: none;
   border: 1px solid #5873fe;
   box-shadow: none;
-  color: #ffffff;
+  color: #e3b04b  ;
 }
 @media (max-width: 767px) {
   .dataTables_length {
@@ -590,9 +590,9 @@ a.dt-button.active:not(.disabled) {
 .btn-info.active,
 .btn-info:focus,
 .btn-info:hover {
-  background: #0286c2;
-  border-color: #03a9f4;
-  color: #ffffff;
+  background: #e3b04b;
+  border-color: #e3b04b;
+  color: #e3b04b  ;
   box-shadow: none;
 }
 .btn-warning {
@@ -723,6 +723,7 @@ a.dt-button.active:not(.disabled) {
   width: 0;
 }
 .sidebar-hide .logo span {
+  
   display: none;
 }
 .header-icon {
@@ -747,7 +748,7 @@ a.dt-button.active:not(.disabled) {
 }
 .header-icon.active .drop-down {
   visibility: visible;
-  opacity: 1;
+  opacity: 0;
   transform: translateY(0px);
 }
 .drop-down {
@@ -773,13 +774,13 @@ a.dt-button.active:not(.disabled) {
 }
 .dropdown-content-body li {
   padding: 15px;
-  border-top: 1px solid #eef5f9;
+  border-top: 1px solid #e3b04b;
 }
 .dropdown-content-body li.active,
 .dropdown-content-body li:focus,
 .dropdown-content-body li:hover {
-  background: #eef5f9;
-  border-top: 1px solid #eef5f9;
+  background: #e3b04b;
+  border-top: 1px solid #e3b04b;
 }
 .dropdown-content-body li a.active,
 .dropdown-content-body li a:focus,
@@ -2468,6 +2469,7 @@ ul.inbox-pagination li {
   margin-bottom: 5px;
 }
 .fileupload-buttonbar .toggle {
+  color: #e3b04b;
   margin-bottom: 5px;
 }
 .files .progress {
@@ -2987,7 +2989,7 @@ tbody tr td:last-child {
   padding-bottom: 6px;
 }
 .profile-widget-one .profile-one-bg {
-  position: relative;
+  position: relative;  
 }
 .profile-widget-one .profile-one-user-photo {
   position: relative;
@@ -3683,7 +3685,7 @@ a:focus,
 button:focus,
 a:hover,
 button:hover {
-  color: #252525;
+  color: #e3b04b;
   outline: none!important;
   text-decoration: none!important;
 }
@@ -3696,7 +3698,7 @@ li {
 }
 p {
   font-family: 'Roboto', sans-serif;
-  color: #868e96;
+  color: #e3b04b;
 }
 .h2,
 .h3,
@@ -3745,7 +3747,7 @@ h6.h1 {
   border: 0;
 }
 .btn-btn:hover {
-  color: #ffffff;
+  color: #e3b04b;
 }
 .letter-space {
   letter-spacing: 1px;
@@ -3760,7 +3762,7 @@ h6.h1 {
 -------------------*/
 .color-primary,
 .text-primary {
-  color: #5873fe;
+  color: #e3b04b;
 }
 .color-success,
 .text-success {
@@ -3802,8 +3804,8 @@ h6.h1 {
 --------------------------*/
 .bg-primary {
   background: #5873fe;
-  color: #ffffff;
-  fill: #5873fe;
+  color: #e3b04b;
+  fill: #e3b04b;
 }
 .bg-success {
   background: #28a745;
