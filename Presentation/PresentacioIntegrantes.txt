@@ -13,3 +13,8 @@ Juan Sebastián Lindo: Hola!, mi nombre es Juan Sebastián Lindo, vivo en Bogot�
 gremio de la refrigeración Industrial en Colombia ejerciendo como Ingeniero de Proyectos en Alfrio SAS, mis intereses 
 personales son la cultura japonesa, programación y tendencias de diseño en automatización. Espero poder incluir en mis
 habilidades la programación como un medio para optimizar las funciones en la empresa que estoy trabajando.
+
+Andrés García: Hola!, mi nombre es Andrés García tengo 34 años de edad, soy Ingeniero Industrial, laboro y vivo en la 
+ciudad de Cali, actualmente me desempeño en el área de gestión de abastecimiento y control de inventarios, 
+mis expectativas al igual que mis objetivos son aprender todo lo relacionado con la programación para posteriormente 
+aplicarlos al ámbito laboral y paralelamente poder desarrollar proyectos personales.
