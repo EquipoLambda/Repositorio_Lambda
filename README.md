@@ -30,6 +30,9 @@ Tal y como se tiene el proyecto actualmente, la creación de usuarios tendría q
 
 -Interfaz del Panel básico a cargo de Juan Sebastián Lindo
 
+Descripción: Diseño en Angular, con Css en Html, basado en una plantilla que ofrece un menú desplegable, modificaciones en labels y habilitación de nuevos botones para rutas futuras. Se procede a hacer el traspaso a React, tomando en cuenta que la transcripción requeriere del replanteamiento de lineas de código, se ajustan parámetros para facilitar el ensamble futuro de las demás interfaces del proyecto, se busca una experiencia de navegación sencilla y que reduzca tiempos de búsqueda por parte del usuario, se plantea un enfoque estético basado en ambiente antiguo y sobrio para que  funcione con temas laborales tradicionales.
+
+
 -Interfaz de Crear Usuario a cargo de Andrés García (React)
 
 Se crea la interfaz para crear un nuevo usuario teniendo en cuenta los requerimientos del Sprint 2. Las interfaces contienen toda la información necesaria en cuanto a atributos obligatorios. Aún queda la posibilidad de ocultar algunos atributos como las contraseñas de la creación de usuario en caso de que se decida realizar la autenticación únicamente con Gmail como se plantea en el proyecto; de igual manera, en cuanto al funcionamiento interno del estado del usuario, se podría dejar la opción de asignarla durante la creación del usuario en caso de que la realice un administrador o de ocultar esta parte y dejarla por defecto como "pendiente de autorización".
