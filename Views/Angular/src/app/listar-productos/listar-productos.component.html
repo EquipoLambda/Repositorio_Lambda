@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Table with Add and Delete Row Feature</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        
+        <div class="table-wrapper">
+            
+            <div class="table-title">
+                <div class="row">
+                    <h3 class="text-center"><b>Lista de productos</b></h3>
+                </div>
+            </div>
+            <input type="text" id="Busqueda" onkeyup="myFunction()" placeholder="Ingrese un nombre para buscar...">
+            <table class="table table-stripped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descripción</th>
+                        <th>Valor unitario</th>
+                        <th>Estado</th>
+                        <th class="text-center">Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>00001</td>
+                        <td>Primer Producto</td>
+                        <td>$ 5.000</td>
+                        <td class="text-success"><b>Disponible</b></td>
+                        <td class="text-center">
+							<a class="edit" title="Editar producto" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>00002</td>
+                        <td>Segundo Producto</td>
+                        <td>$ 10.000</td>
+                        <td class="text-danger"><b>No disponible</b></td>
+                        <td class="text-center">
+							<a class="edit" title="Editar producto" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>00003</td>
+                        <td>Tercer Producto</td>
+                        <td>$ 2.500</td>
+                        <td class="text-danger"><b>No disponible</b></td>
+                        <td class="text-center">
+							<a class="edit" title="Editar producto" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>     
+</body>
+</html>
