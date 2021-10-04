@@ -1,4 +1,4 @@
-import EditarRol2 from '.EditarRol2'
+import EditarRol2 from './Components/EditarRol2'
 
 function App() {
   return (
