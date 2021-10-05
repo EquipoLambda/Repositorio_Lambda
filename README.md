@@ -43,7 +43,9 @@ La creación de la interfaz en React se basó en la interfaz que ya tenía cread
 
 El codigo correspondiente a esta interfaz de edicion de usuario fue realizado por Daniel Garay en el framework angular en principio, esta interfaz se creo segun requesitos del sprint 2 , basandose en la descripcion de historias de usuario, esta interfaz es muy similar a la anterior, Crear Usario, manteniendo los datos requeridos por esto anadiendo las funciones de edicion y seleccion de tipo de usuario. Todo el codigo de esta interfaz fue migrado a React sin inconvenientes mayores, se trabajo a manera dede componente manteniendo su apariencia y propiedades con cambios en la sintaxis de algunas etiquetas html.
 
--Interfaz de Listar Usuarios a cargo de Jasmin Fuquen COPIAR QUE PARTE DE LA BASE DE ANGULAR LA REALIZÓ ROBERT BUITRAGO (DESERTOR)
+-Interfaz de Listar Usuarios a cargo de Jasmin Fuquen
+
+Se crea la interfaz listar usuarios paa que el administrador pueda tener un panorama general de los usuarios creados y en que estado se encuentran, en primera instancia el compañero Robert Buitrago realizo la interfaz Angular, despues la compañera Jasmin Fuquen realizo unos cambios pertinentes, ya por ultimo el compañero Mauricio Rivas realizo la migracion de la interfaz a React.
 
 -Interfaz de Crear Producto a cargo de Juan Camilo Caicedo
 
@@ -51,7 +53,9 @@ Se crea la interfaz para crear un nuevo producto teniendo en cuenta los requerim
 
 -Interfaz de Editar Producto a cargo de Karen González
 
--Interfaz de Listar Productos a cargo de Jasmin Fuquen COPIAR QUE PARTE DE LA BASE DE ANGULAR LA REALIZÓ ROBERT BUITRAGO (DESERTOR)
+-Interfaz de Listar Productos a cargo de Jasmin Fuquen
+
+Se crea la interfaz listar usuarios para que cualquiera de los dos roles (vendedor o administrador) pueda tener un panorama general de los productos creados y en que estado se encuentran, en primera instancia el compañero Robert Buitrago realizo la interfaz Angular, despues la compañera Jasmin Fuquen realizo unos cambios pertinentes, ya por ultimo el compañero Mauricio Rivas realizo la migracion de la interfaz a React.
 
 -Interfaz de Crear Venta a cargo de Juan Camilo Caicedo
 
@@ -61,7 +65,7 @@ Se crea la interfaz para registrar ventas teniendo en cuenta los requerimientos 
 
 Se crea la interfaz para editar ventas tomando como base la que se realizó para crear ventas. Lo único que se debe destacar es que existen campos que no se pueden editar como la fecha o el ID de la venta.
 
--Interfaz de Listar Ventas a cargo de Jasmin Fuquen
+-Interfaz de Listar Ventas a cargo de Andrés García
 
 -Interfaz de Crear Rol a cargo de Andrés García (React) 
 
@@ -73,3 +77,4 @@ En primera instancia la creacion de la interfaz de edicion de rol fue realizada 
 
 -Interfaz de Listar Roles a cargo de Jasmin Fuquen
 
+Se crea el listar roles para verificar el nombre y su estado para relacionarlo a los usuarios.
