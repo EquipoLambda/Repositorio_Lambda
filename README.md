@@ -67,6 +67,8 @@ Se crea la interfaz para editar ventas tomando como base la que se realizó para
 
 -Interfaz de Listar Ventas a cargo de Andrés García
 
+Se crea la interfaz listar ventas para que cualquiera de los dos roles (vendedor o administrador) pueda tener un panorama general de las ventas realizadas y el valor total
+
 -Interfaz de Crear Rol a cargo de Andrés García (React) 
 
 Inicialmente Jasmin Fuquen crea en Angular la interfaz para Crear un nuevo rol teniendo en cuenta los requerimientos del Sprint 2. Las interfaz contienen toda la información necesaria en cuanto a atributos para ingresar un nuevo rol y su respectiva descripción, posteriormente se migra esta interfaz por parte de Andrés García ajustando el código requerido por React manteniendo su diseño y sus funcionalidades, la migración del código base desarrollado para ser ejecutado en Angular a React se realizó sin inconvenientes mayores a excepción de alguna propiedad html como el color de los iconos o alguna característica particular de la sintaxis de cada framework
