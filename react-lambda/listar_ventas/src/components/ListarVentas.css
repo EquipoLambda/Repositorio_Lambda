@@ -6,7 +6,7 @@ body {
 }
 
 
-.table-wrapper {
+#table {
     position: relative;
     border: 1px solid black;
     width: 80%;
