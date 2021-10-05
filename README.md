@@ -14,6 +14,9 @@ Victoria Andrea Vasquez (25102981);
 # Link de trello
 https://trello.com/b/KQu7KE77/lambda
 
+# Documento Proceso Proyecto
+https://docs.google.com/document/d/1uVkItL69uf04zv56t0uB2hQkX2kA2QvYOLFD1ol654U/edit?usp=sharing
+
 # Descripción general del Sprint 2: Duración de 2 semanas
 
 Durante la primera semana se aprendió sobre HTML y progresivamente se realizó la base de la entrega en Angular como estaba incialmente planteado. En la segunda semana se nos informó del cambio del proyecto hacia React, esto nos retrasó un poco y también nos dejó un poco perdidos al tener que cambiar nuestro plan de trabajo. Debido a estos cambios y a factores personales, durante el proceso dos integrantes del grupo original desertaron y esto provocó problemas en cuanto a la repartición de tareas; decidimos entonces buscar nuevos integrantes y, apoyados en el documento que enviaron del área de permanencia, formamos un nuevo grupo de 7 personas (jueves 30 de septiembre) dado que varias compañeros se encontraban sin grupo o en grupos desintegrados. Con esto, dimos una introducción a nuestros nuevos compañeros para que entendieran nuestra metodología de trabajo y el proyecto en sí, para proceder finalmente a repartir nuevamente las tareas pendientes y poder terminar el Sprint 2. 
