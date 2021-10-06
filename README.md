@@ -29,7 +29,9 @@ Tal y como se tiene el proyecto actualmente, la creación de usuarios tendría q
 
 # Descripción de interfaces finales en React
 
--Interfaz de Login a cargo de Victoria Andrea Vasquez (React)  COPIAR QUE LA BASE DE ANGULAR LA REALIZÓ JASMIN FUQUEN
+-Interfaz de Login a cargo de Victoria Andrea Vasquez (React) 
+
+Se crea la interfaz del login inicialmente en Angula utilizando HTML, CSS y JS, esta interfaz se utilizara para darle entrada a la aplicacion dependiendo la autenticacion con su respectivo rol.
 
 -Interfaz del Panel básico a cargo de Juan Sebastián Lindo
 
@@ -55,6 +57,8 @@ Se crea la interfaz listar usuarios paa que el administrador pueda tener un pano
 Se crea la interfaz para crear un nuevo producto teniendo en cuenta los requerimientos del Sprint 2. Las interfaces contienen toda la información necesaria en cuanto a atributos obligatorios. Aún queda la posibilidad de ocultar algunos atributos como el ID del producto en caso de que se decida asignarlo automáticamente durante la creación y que no se tenga que ingresar manualmente. La interfaz fue realizada inicialmente en Angular y luego se migró a React.
 
 -Interfaz de Editar Producto a cargo de Karen González
+
+Se crea Interfaz para editar los productos deseados, dependiendo del ID del producto seleccionado.
 
 -Interfaz de Listar Productos a cargo de Jasmin Fuquen
 
