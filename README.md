@@ -7,7 +7,6 @@ Juan Camilo Caicedo (1143871845);
 Juan Sebastián Lindo (1020746091); 
 Jasmin Fuquen (1075685565); 
 Mauricio Rivas (1014296110); 
-Karen González (52973086); 
 Andrés García (1116238326); 
 Victoria Andrea Vasquez (25102981); 
 
