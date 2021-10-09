@@ -58,7 +58,7 @@ export const SidebarData = [
     subNav: [
       {
         title: 'Agregar',
-        path: '/ventas/agregar',
+        path: '/productos/agregar',
         icon: <AiIcons.AiOutlineCloudUpload />,
         cName: 'sub-nav'
       },
@@ -72,7 +72,7 @@ export const SidebarData = [
   },
   {
     title: 'ϖ   Roles',
-    path: '/roles',
+    path: '/',
     icon: <AiIcons.AiOutlineRobot />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -80,7 +80,7 @@ export const SidebarData = [
     subNav: [
       {
         title: 'Listar',
-        path: '/roles/listar',
+        path: '/roles',
         icon: <AiIcons.AiOutlineReconciliation />,
         cName: 'sub-nav'
       },
