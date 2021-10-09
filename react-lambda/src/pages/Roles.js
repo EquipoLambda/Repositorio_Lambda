@@ -112,7 +112,7 @@ class RolCRUD extends React.Component {
               {this.state.data.map((dato) => (
                 <tr key={dato.id}>
                   <td>{dato.id}</td>
-                  <td>{dato.nameRol}</td>
+                   <td>{dato.nameRol}</td>
                   <td>{dato.estadoRol}</td>
                   <td>
                     <Button
@@ -244,7 +244,7 @@ class RolCRUD extends React.Component {
               </InputGroup>
             </FormGroup>
             <p className="text-center">
-              ¿El rol ya fue creado? <a href="">Buscar Rol</a>
+              ¿El rol ya fue creado? <a href="/">Buscar Rol</a>
             </p>
           </ModalBody>
 
