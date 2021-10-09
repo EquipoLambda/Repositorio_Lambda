@@ -87,6 +87,11 @@ En primera instancia la creacion de la interfaz de edicion de rol fue realizada 
 
 Se crea el listar roles para verificar el nombre y su estado para relacionarlo a los usuarios.
 
+
+
+# Descripción general del Sprint 3: Semana 5
+
+
 -Conexión interfaces graficas de usuario (Andrés García)
 
 Se realiza conexión entre las interfaces graficas de usuario con el panel principal y realizando el CRUD de usuario, quedando integrado el usuario con las acciones para Listar, Crear, Editar y Eliminar y se establece conexión con el panel de control 
