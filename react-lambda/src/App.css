@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-* {
+/* * {
   box-sizing: content-box;
   margin: 2px;
   width: auto;
@@ -8,12 +8,12 @@
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   
-}
+} */
 
 body {
-background-color: #cccccc;
+/* background-color: #cccccc; */
   background-image: url("./components/templo.jpg");
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: cover;
 }
 .usuario,

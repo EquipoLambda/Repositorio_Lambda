@@ -1,5 +1,4 @@
 import React from 'react';
-import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
 import * as RiIcons from 'react-icons/ri';
@@ -71,7 +70,7 @@ export const SidebarData = [
   },
   {
     title: 'Roles',
-    path: '/roles',
+    path: '/',
     icon: <AiIcons.AiOutlineRobot />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -79,7 +78,7 @@ export const SidebarData = [
     subNav: [
       {
         title: 'Listar',
-        path: '/roles/listar',
+        path: '/roles',
         icon: <AiIcons.AiOutlineReconciliation />,
         cName: 'sub-nav'
       },

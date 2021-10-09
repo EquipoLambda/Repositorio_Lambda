@@ -7,21 +7,17 @@ import Productos from './pages/Productos';
 import Roles from './pages/Roles';
 import background from "./components/logoLambda.png";
 
-
 function App() {
   return (
-    
     <Router>    
       <Sidebar />      
       <Switch>
         <Route path='/usuario' exact component={Usuario} />
         <Route path='/ventas' exact component={Ventas} />
         <Route path='/productos' exact component={Productos} />
-        <Route path='/roles' exact component={Roles} />      
-        
+        <Route path='/roles' exact component={Roles} />        
       </Switch>
     </Router>
-    
   );
 }
  
