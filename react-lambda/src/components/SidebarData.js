@@ -4,9 +4,10 @@ import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
 import * as RiIcons from 'react-icons/ri';
 
+
 export const SidebarData = [
   {
-    title: 'Usuario',
+    title: 'Φ   Usuario',
     path: '/usuario',
     icon: <AiIcons.AiOutlineUserSwitch />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -26,7 +27,7 @@ export const SidebarData = [
     ]
   },
   {
-    title: 'Ventas',
+    title: 'β   Ventas',
     path: '/ventas',
     icon: <AiIcons.AiOutlineBook />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -48,7 +49,7 @@ export const SidebarData = [
     ]
   },
   {
-    title: 'Productos',
+    title: 'ψ   Productos',
     path: '/productos',
     icon: <AiIcons.AiOutlineCodeSandbox />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -70,7 +71,7 @@ export const SidebarData = [
     ]
   },
   {
-    title: 'Roles',
+    title: 'ϖ   Roles',
     path: '/roles',
     icon: <AiIcons.AiOutlineRobot />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -92,7 +93,7 @@ export const SidebarData = [
     ]
   },
   {
-    title: 'Soporte',
+    title: 'ϑ   Soporte',
     path: '/support',
     icon: <IoIcons.IoMdHelpCircle />
   }
