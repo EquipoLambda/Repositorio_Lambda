@@ -16,14 +16,39 @@ body {
   /* background-repeat: no-repeat; */
   background-size: cover;
 }
-.usuario,
-.ventas,
-.productos,
-.roles {
+.usuario{
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  
+ 
+}
+
+.ventas{
   display: flex;
   height: 90vh;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
  
+}
+
+.productos{
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;  
+ 
+}
+
+.roles {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  
 }

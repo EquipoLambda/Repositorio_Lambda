@@ -58,8 +58,11 @@ const Sidebar = () => {
         <SidebarNav sidebar={sidebar}>
           <SidebarWrap>
             <NavIcon to='#'>
-              <img src={logo}  onClick={showSidebar} />
-            </NavIcon>
+              <img src={logo}  onClick={showSidebar}  style={{paddingTop: 80, padding: 40 }}/>                          
+            </NavIcon>      
+            <h3 className="text-center" style={{paddingTop: 35, height: 80, color:'#5c1e17'}} >
+            <b>Equipo Lambda</b>
+          </h3>       
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
             })}

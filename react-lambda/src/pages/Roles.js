@@ -13,7 +13,10 @@ import {
   ModalFooter,
 } from "reactstrap";
 
-import { InputGroup, FormControl, Form} from "react-bootstrap";
+import { InputGroup, FormControl, Form } from "react-bootstrap";
+
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+
 
 const data = [
   { id: 1, nameRol: "Administrador", description: "", estadoRol: "Activo" },
@@ -31,7 +34,9 @@ class RolCRUD extends React.Component {
       description: "",
       estadoRol: "",
     },
+
   };
+
 
   mostrarModalActualizar = (dato) => {
     this.setState({
@@ -85,9 +90,19 @@ class RolCRUD extends React.Component {
     });
   };
 
+
+
   render() {
     return (
       <>
+        <MDBContainer className="mt-5">
+          <MDBRow>
+            <MDBCol>
+              <img src="../components/grecia1.jpg" alt="thumbnail" />
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+        
         <Container>
           <br />
           <Button id="btn-5c1e17" onClick={() => this.mostrarModalInsertar()}>
@@ -140,7 +155,7 @@ class RolCRUD extends React.Component {
             <FormGroup>
               <InputGroup className="mb-3">
                 <InputGroup.Text id="fondoicono" class="input-group-text">
-                <AiIcons.AiTwotoneCreditCard />
+                  <AiIcons.AiTwotoneCreditCard />
                 </InputGroup.Text>
                 <FormControl
                   readOnly
@@ -153,7 +168,7 @@ class RolCRUD extends React.Component {
             <FormGroup>
               <InputGroup className="mb-3">
                 <InputGroup.Text id="fondoicono" class="input-group-text">
-                <AiIcons.AiOutlineUserAdd />
+                  <AiIcons.AiOutlineUserAdd />
                 </InputGroup.Text>
                 <FormControl
                   name="nameRol"
@@ -167,7 +182,7 @@ class RolCRUD extends React.Component {
             <FormGroup>
               <InputGroup className="mb-3">
                 <InputGroup.Text id="fondoicono" class="input-group-text">
-                <AiIcons.AiTwotoneTags/>
+                  <AiIcons.AiTwotoneTags />
                 </InputGroup.Text>
                 <Form.Select
                   className="form-control"
@@ -184,7 +199,7 @@ class RolCRUD extends React.Component {
             <FormGroup>
               <InputGroup className="mb-3">
                 <InputGroup.Text id="fondoicono" class="input-group-text">
-                <AiIcons.AiFillEdit/>
+                  <AiIcons.AiFillEdit />
                 </InputGroup.Text>
                 <Form.Control
                   as="textarea"
@@ -192,7 +207,7 @@ class RolCRUD extends React.Component {
                   name="description"
                   onChange={this.handleChange}
                   value={this.state.form.description}
-              />
+                />
               </InputGroup>
             </FormGroup>
           </ModalBody>
@@ -218,7 +233,7 @@ class RolCRUD extends React.Component {
             <FormGroup>
               <InputGroup className="mb-3">
                 <InputGroup.Text id="fondoicono" class="input-group-text">
-                <AiIcons.AiOutlineUserAdd />
+                  <AiIcons.AiOutlineUserAdd />
                 </InputGroup.Text>
                 <FormControl
                   name="nameRol"
@@ -232,7 +247,7 @@ class RolCRUD extends React.Component {
             <FormGroup>
               <InputGroup className="mb-3">
                 <InputGroup.Text id="fondoicono" class="input-group-text">
-                <AiIcons.AiFillEdit/>
+                  <AiIcons.AiFillEdit />
                 </InputGroup.Text>
                 <Form.Control
                   as="textarea"
@@ -249,7 +264,7 @@ class RolCRUD extends React.Component {
           </ModalBody>
 
           <ModalFooter>
-            <Button 
+            <Button
               id="btn-e3b04b"
               onClick={() => this.insertar()}>
               Insertar
