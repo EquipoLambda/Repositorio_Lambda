@@ -15,8 +15,6 @@ import {
 
 import { InputGroup, FormControl, Form } from "react-bootstrap";
 
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
-
 
 const data = [
   { id: 1, nameRol: "Administrador", description: "", estadoRol: "Activo" },
@@ -95,16 +93,9 @@ class RolCRUD extends React.Component {
   render() {
     return (
       <>
-        <MDBContainer className="mt-5">
-          <MDBRow>
-            <MDBCol>
-              <img src="../components/grecia1.jpg" alt="thumbnail" />
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
-        
-        <Container>
-          <br />
+       <h1 class="img2"> 
+        <Container>        
+          <br />          
           <Button id="btn-5c1e17" onClick={() => this.mostrarModalInsertar()}>
             Crear
           </Button>
@@ -277,6 +268,7 @@ class RolCRUD extends React.Component {
             </Button>
           </ModalFooter>
         </Modal>
+        </h1>
       </>
     );
   }

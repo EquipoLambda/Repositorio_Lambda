@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../css/RolCRUD.css";
+import "../css/ProductosCRUD.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as AiIcons from 'react-icons/ai';
 import {
@@ -90,6 +90,7 @@ export default class CRUDProductos extends Component {
   render() {
     return (
       <>
+      <h1 class="img3"> 
         <Container>
           <br />
           <Button id="btn-5c1e17" onClick={() => this.mostrarModalInsertar()}>
@@ -262,6 +263,7 @@ export default class CRUDProductos extends Component {
             </Button>
           </ModalFooter>
         </Modal>
+        </h1>
       </>
     );
   }

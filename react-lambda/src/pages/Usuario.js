@@ -116,6 +116,7 @@ class Usuario extends React.Component {
     render() { 
         return (   
         <>
+        <h1 class="img2"> 
             <Container>
                 <br />
                 <Button id="bot-elim" onClick={()=>this.mostrarModalInsertar()}>Crear</Button>
@@ -454,7 +455,7 @@ class Usuario extends React.Component {
             </Button>
           </ModalFooter>
         </Modal>
-
+        </h1>
             </>
         
         

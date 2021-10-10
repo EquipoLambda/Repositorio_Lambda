@@ -15,3 +15,16 @@
     border-color: #5c1e17;
     color: white;
   }
+
+  .img{   
+    background-image: url('../components/grecia1.jpg');
+    background-repeat: inherit;
+    background-position: relative;
+    position: relative;
+    border: 10px solid #f4dfaf;
+    padding: 10%;
+    opacity:85%;         
+    
+  }
+
+  
