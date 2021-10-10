@@ -96,3 +96,5 @@ Se crea el listar roles para verificar el nombre y su estado para relacionarlo a
 
 Se realiza conexión entre las interfaces graficas de usuario con el panel principal y realizando el CRUD de usuario, quedando integrado el usuario con las acciones para Listar, Crear, Editar y Eliminar y se establece conexión con el panel de control 
 
+-Integracion interfaces graficas de productos (Mauricio Rivas)
+Previamente a la realizacion del proceso de integracion del crud productos al panel basico, se desarrollo el codigo necesario para juntar las vistas Crear,Editar y Listar productos utilizando etiquetas modales a manera de pop up, para luego integrarlo al panel basico que ya poseia desarrollo de routes.
