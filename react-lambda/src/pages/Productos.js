@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../css/ProductosCRUD.css";
+import "../pages/ProductosCRUD.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as AiIcons from 'react-icons/ai';
 import {

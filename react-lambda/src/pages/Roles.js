@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/RolCRUD.css";
+import "../pages/RolCRUD.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as AiIcons from 'react-icons/ai';
 import {

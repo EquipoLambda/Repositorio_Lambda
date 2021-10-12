@@ -1,5 +1,5 @@
 import React from 'react'
-import "../css/UsuarioCRUD.css"
+import "../pages/UsuarioCRUD.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as AiIcons from "react-icons/ai";
 

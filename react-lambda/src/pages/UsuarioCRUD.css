@@ -18,7 +18,7 @@
     }
  
     .img2{   
-      background-image: url('../components/grecia2.jpg');
+      background-image: url('/src/Assets/grecia2.jpg');
       background-repeat: repeat;            
       border: 10px solid #f4dfaf;      
       opacity:90%;   

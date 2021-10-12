@@ -5,7 +5,7 @@ import * as FaIcons from 'react-icons/fa';
 import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons';
-import logo from './logoLambda.png';
+import logo from '../Assets/logoLambda.png';
 
 
 const Nav = styled.div`

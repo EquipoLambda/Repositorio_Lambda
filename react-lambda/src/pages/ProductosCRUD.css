@@ -1,6 +1,6 @@
 
   .img3{   
-    background-image: url('../components/grecia3.jpg');
+    background-image: url('/src/Assets/grecia3.jpg');
     background-repeat: inherit;
     background-position: relative;
     position: relative;

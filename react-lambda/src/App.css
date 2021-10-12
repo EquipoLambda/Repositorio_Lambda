@@ -12,7 +12,7 @@
 
 body {
 /* background-color: #cccccc; */
-  background-image: url("./components/templo.jpg");
+  background-image: url("/src/Assets/templo.jpg");
   /* background-repeat: no-repeat; */
   background-size: cover;
 }

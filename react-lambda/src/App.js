@@ -1,11 +1,11 @@
-import './App.css';
+import '../src/App.css';
 import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Usuario from './pages/Usuario';
 import Ventas from './pages/Ventas';
 import Productos from './pages/Productos';
 import Roles from './pages/Roles';
-import background from "./components/logoLambda.png";
+
 
 function App() {
   return (
