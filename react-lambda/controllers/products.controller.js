@@ -4,9 +4,9 @@ const ProductSchema = require('../models/product');
 const { validationResult } = require('express-validator');
 
 const getProduct = async (req, res) => {
-    if (req.params.id != 'undefined') {
+    if (req.body.id != 'undefined') {
         try {
-            let product = await ProductSchema.findById(req.params.id);
+            let product = await ProductSchema.findById(req.body.id);
             res.status(200).json({ data: product });
         }
         catch (err) {
@@ -81,19 +81,19 @@ const updateProduct = async (req, res) => {
     }
     try {
         let newProduct = {
-            id: req.params.id,
+            id: req.body.id,
             valor: req.body.valor,
             descripcion: req.body.descripcion,
             estado: req.body.estado
         }
-        await ProductSchema.findByIdAndUpdate(req.params.id, newProduct);
+        await ProductSchema.findByIdAndUpdate(req.body.id, newProduct);
         res.status(201).json({ data: newProduct })
     }
     catch (err) {
         res.status(404).json({
             error: {
                 code: 404,
-                message: "ID not found"
+                message: "ID no encontrado"
             }
         })
     }
