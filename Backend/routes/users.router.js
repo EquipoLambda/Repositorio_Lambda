@@ -4,9 +4,9 @@ const { body } = require('express-validator');
 const { usersController } = require('../controllers');
 const verifyToken = require('../middlewares/verifyToken');
 
-router.get('/:id',verifyToken, usersController.getUser)
-
-router.get('/',verifyToken, usersController.getUsers)
+router.get('/:id', verifyToken, usersController.getUser)
+//router.get('/', verifyToken, usersController.getUsers)
+router.get('/',  usersController.getUsers)
 
 router.post('/',
     body('fullName', 'El nombre es requerido y debe estar entre(6,100) carecteres')
