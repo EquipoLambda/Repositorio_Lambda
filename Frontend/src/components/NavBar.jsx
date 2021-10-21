@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, makeStyles, AppBar, Toolbar, Box } from '@material-ui/core';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import { fb } from "../config/firebase";
 
 import { NavLink } from 'react-router-dom';
 
@@ -42,6 +43,10 @@ const useStyle = makeStyles({
 
 export function NavBar() {
 
+        const cerrarSesion = () => {
+          fb.auth().signOut();
+        };
+
     const classes = useStyle();
 
     return (
@@ -65,7 +70,7 @@ export function NavBar() {
                             </Button>
                         </NavLink>
                         <NavLink className={classes.tab_end} to="/logout">
-                            <Button color="secondary">
+                            <Button onClick={cerrarSesion} color="secondary">
                                 Logout
                             </Button>
                         </NavLink>
