@@ -56,12 +56,12 @@ export function Signup() {
     
     const registerUser = async () => {
         await createUser(user);
-        history.push('/');
+        history.push('/getUsers');
     }
 
         
     const Cancel = () => {
-        history.push('/');
+        history.push('/getUsers');
     }
 
 

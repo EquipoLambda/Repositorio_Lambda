@@ -14,6 +14,7 @@ import { NotFound } from './components/NotFound';
 import { Base } from './components/Base';
 import { UserList } from './components/UserList';
 import { EditUser } from './components/EditUser';
+
 //import { getCurrentUser } from './services/AuthService';
 import './css/lambda.css';
 
@@ -34,6 +35,7 @@ export function App() {
                 <Route exact path="/logout" component={Logout} />
                 <Route exact path="/getUsers" component={UserList} />
                 <Route exact path="/editUser/:id" component={EditUser} />
+                
                 <Route component={NotFound} />
             </Switch>
         </BrowserRouter>

@@ -24,6 +24,10 @@ const UserSchema = Schema({
     date: {
         type: Date,
         default: Date.now
+    },
+    estado: {
+        type: Boolean,
+        default: true
     }
 })
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FormGroup, FormControl, InputLabel, Input, Button, makeStyles, Typography } from '@material-ui/core';
+import { FormGroup, FormControl, InputLabel, Input, Button, makeStyles, Typography, RadioGroup, FormLabel, FormControlLabel, Radio } from '@material-ui/core';
 import { editUser, getUser } from '../services/UsersService';
 import { useHistory, useParams } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
@@ -8,8 +8,8 @@ const initialValue = {
     _id:'',
     fullName: '',
     email: '',
-    password:''
-    
+    password:'',
+    estado:true
 }
 
 const useStyles = makeStyles({
@@ -40,7 +40,7 @@ const theme = createTheme({
 
 export function EditUser() {
     const [users, setUser] = useState(initialValue);
-    const {_id, fullName, email, password } = users;
+    const {_id, fullName, email, password, estado } = users;
     const classes = useStyles();
     let history = useHistory();
 
@@ -59,6 +59,10 @@ export function EditUser() {
         setUser({ ...users, [e.target.name]: e.target.value });
     }
 
+    
+    const onStateChange = (state) => {
+        setUser({ ...users, "estado": state });
+    }
     
     const updateUserData = async () => {
         await editUser(users);
@@ -87,6 +91,18 @@ export function EditUser() {
             <FormControl>
                 <InputLabel htmlFor="my-input">Contraseña</InputLabel>
                 <Input onChange={(e) => onValueChange(e)} name="password" value={password} id="my-input" />
+            </FormControl>
+            <FormControl component="fieldset">
+                <FormLabel component="legend">Estado</FormLabel>
+                <RadioGroup
+                    name='estado'
+                    onChange={(e) => onStateChange(e.target.value === "activo")}
+                    aria-label="estado"
+                    defaultValue="activo"
+                    value={estado ? "activo" : "noActivo"}>
+                    <FormControlLabel value="activo" control={<Radio />} label="Activo" />
+                    <FormControlLabel value="noActivo" control={<Radio />} label="Inactivo" />
+                </RadioGroup>
             </FormControl>
             <ThemeProvider theme={theme}>
             <FormControl>

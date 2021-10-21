@@ -60,6 +60,7 @@ export function UserList() {
                 <TableRow className={classes.thead}>
                     <TableCell align="center">Nombre Completo</TableCell>
                     <TableCell align="center">Email</TableCell>
+                    <TableCell align="center">Estado</TableCell>
                     <TableCell></TableCell>
                 </TableRow>
             </TableHead>
@@ -69,6 +70,7 @@ export function UserList() {
                         <TableRow className={classes.row} key={user._id}>
                             <TableCell align="center">{user.fullName}</TableCell>
                             <TableCell align="center">{user.email}</TableCell>
+                            <TableCell align="center">{user.estado ? "Activo" : "Inactivo"}</TableCell>
                             <TableCell>
                                 <ThemeProvider theme={theme}>
                                     <Button variant="contained" component={Link} to={`/editUser/${user._id}`} color="primary" className={classes.buttonEdit}>Editar</Button>
