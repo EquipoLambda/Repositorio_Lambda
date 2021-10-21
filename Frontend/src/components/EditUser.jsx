@@ -3,12 +3,13 @@ import { FormGroup, FormControl, InputLabel, Input, Button, makeStyles, Typograp
 import { editUser, getUser } from '../services/UsersService';
 import { useHistory, useParams } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import { verifyToken } from '../services/AuthService'
 
 const initialValue = {
-    _id:'',
+    //_id:'',
     fullName: '',
     email: '',
-    password:'',
+    //password:'',
     estado:true
 }
 
@@ -40,13 +41,14 @@ const theme = createTheme({
 
 export function EditUser() {
     const [users, setUser] = useState(initialValue);
-    const {_id, fullName, email, password, estado } = users;
+    const { fullName, email, estado } = users;
     const classes = useStyles();
     let history = useHistory();
 
     const { id } = useParams();
 
     useEffect(() => {
+        verifyToken();
         loadUserData();
     }, [])
 
@@ -76,10 +78,7 @@ export function EditUser() {
     return (
         <FormGroup className={classes.container}>
             <Typography variant="h4">Editar Usuario</Typography>
-            <FormControl>
-                <InputLabel htmlFor="my-input">Id</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="_id" value={_id} id="my-input" readOnly/>
-            </FormControl>
+            
             <FormControl>
                 <InputLabel htmlFor="my-input">Nombre Completo</InputLabel>
                 <Input onChange={(e) => onValueChange(e)} name="fullName" value={fullName} id="my-input" />
@@ -88,10 +87,7 @@ export function EditUser() {
                 <InputLabel htmlFor="my-input">Email</InputLabel>
                 <Input onChange={(e) => onValueChange(e)} name="email" value={email} id="my-input" />
             </FormControl>
-            <FormControl>
-                <InputLabel htmlFor="my-input">Contraseña</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="password" value={password} id="my-input" />
-            </FormControl>
+            
             <FormControl component="fieldset">
                 <FormLabel component="legend">Estado</FormLabel>
                 <RadioGroup

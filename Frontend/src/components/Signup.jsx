@@ -56,12 +56,13 @@ export function Signup() {
     
     const registerUser = async () => {
         await createUser(user);
-        history.push('/getUsers');
+        history.push('/login');
+        //history.push('/getUsers');
     }
 
         
     const Cancel = () => {
-        history.push('/getUsers');
+        history.push('/');
     }
 
 
@@ -78,7 +79,7 @@ export function Signup() {
             </FormControl>
             <FormControl>
                 <InputLabel htmlFor="my-input">Password</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="password" value={password} id="my-input" type="password" />
+                <Input onChange={(e) => onValueChange(e)} name="password" value={password} id="my-input" type="password"  />
             </FormControl>
             <ThemeProvider theme={theme}>
             <FormControl>

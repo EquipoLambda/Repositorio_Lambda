@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Table, TableHead, TableCell, TableRow, TableBody, Button, makeStyles } from '@material-ui/core';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { getProducts} from '../services/ProductService';
 import { Link } from 'react-router-dom';
+import { getCurrentUser } from '../services/AuthService';
 
 const useStyles = makeStyles({
     table: {
@@ -42,10 +43,12 @@ const theme = createTheme({
 export function ProductList() {
     const classes = useStyles();
 
+    const [user, setUser] = useState([])
     const [products, setProducts] = useState([])
 
     useEffect(() => {
         getAllProducts();
+        setUser(getCurrentUser());
     }, [])
 
     const getAllProducts = async () => {
@@ -74,9 +77,11 @@ export function ProductList() {
                             <TableCell align="center">{product.valor}</TableCell>
                             <TableCell align="center">{product.estado ? "Disponible" : "Agotado"}</TableCell>
                             <TableCell>
+                            {user && (
                                 <ThemeProvider theme={theme}>
                                     <Button variant="contained" component={Link} to={`/editProduct/${product._id}`} color="primary" className={classes.buttonEdit}>Editar</Button>
                                 </ThemeProvider>
+                             )}
                             </TableCell>
                         </TableRow>
                     ))

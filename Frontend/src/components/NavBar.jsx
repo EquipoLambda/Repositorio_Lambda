@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
 import { Button, makeStyles, AppBar, Toolbar, Box } from '@material-ui/core';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { NavLink } from 'react-router-dom';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-
+import { getCurrentUser } from '../services/AuthService';
+import { blue } from '@material-ui/core/colors';
+import { ListItemText, ListItemAvatar, ListItem, Avatar } from '@material-ui/core'
 
 const theme = createTheme({
     palette: {
@@ -49,9 +51,22 @@ const useStyle = makeStyles({
     }
 })
 
+const initialValue = {
+    email: ""
+}
+
 export function NavBar() {
 
+    const logout = () => {
+        localStorage.clear();
+        window.location = "/";
+    }
+    const [user, setUser] = useState(initialValue);
     const classes = useStyle();
+
+    useEffect(() => {
+        setUser(getCurrentUser());
+    }, []);
 
     const [anchorEl, setAnchorEl] = React.useState(null)
     const handleClose = () =>{
@@ -107,13 +122,28 @@ export function NavBar() {
                                 Login
                             </Button>
                         </NavLink>
-                        <NavLink className={classes.tab_end} to="/logout">
-                            <Button color="secondary">
+                        
+                    </ThemeProvider>
+
+                    {user && (
+                        <>
+                            <Button className={classes.tab_end} >
+                                <ListItem>
+                                    <ListItemAvatar>
+                                        <Avatar sx={{ bgcolor: blue[100], color: blue[600] }}>
+                                            👤
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary={user.email} />
+                                </ListItem>
+                            </Button>
+                            <Button variant="contained" onClick={() => logout()} color="secondary">
                                 Logout
                             </Button>
-                        </NavLink>
-                    </ThemeProvider>
-                   
+                        </>
+                    )}
+
+
                 </Toolbar>
             </AppBar>
             </Box>

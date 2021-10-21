@@ -101,7 +101,7 @@ const updateUser = async (req, res) => {
         }
         await UserSchema.findByIdAndUpdate(req.params.id, newUser);
         return res.status(201).json({ data: newUser })
-    }
+    }           
     catch (err) {
         return res.status(404).json({
             error: {

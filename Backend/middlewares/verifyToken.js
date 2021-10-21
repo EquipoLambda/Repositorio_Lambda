@@ -3,6 +3,7 @@ require('dotenv').config();
 
 const verifyToken = async (req, res, next) => {
     const token = req.header('auth-token');
+    console.log(token);
     if (!token) {
         return res.status(403).json({
             error: {

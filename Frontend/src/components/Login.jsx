@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { Paper, Grid, TextField, makeStyles, Button, Typography, FormControlLabel, Checkbox } from '@material-ui/core';
+import { Paper, Grid, TextField, makeStyles, Button, Typography } from '@material-ui/core';
 import { loginAuth } from '../services/AuthService';
+
 
 const useStyles = makeStyles({
     container: {
@@ -51,7 +52,7 @@ export function Login() {
             </Grid>
         </Grid>
         <Grid container justify="center" style={{ marginTop: '10px' }}>
-            <Button variant="outlined" onClick={() => startLogin()} color="primary" style={{ textTransform: "none" }}>Inicia sesión</Button>
+            <Button variant="contained" onClick={() => startLogin()} color="primary" style={{ textTransform: "none" }}>Inicia sesión</Button>
         </Grid>
     </Paper>
     )

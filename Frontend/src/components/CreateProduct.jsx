@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FormGroup, FormControl, InputLabel, Input, Button, makeStyles, Typography, RadioGroup, FormLabel, FormControlLabel, Radio } from '@material-ui/core';
 import { addProduct } from '../services/ProductService';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { useHistory } from 'react-router-dom';
+import { getCurrentUser } from '../services/AuthService';
+import { verifyToken } from '../services/AuthService';
 
 const initialValue = {
     valor: '',
@@ -37,6 +39,15 @@ const theme = createTheme({
 });
 
 export function CreateProduct() {
+    const [user, setUser] = useState(null)
+
+    useEffect(() => {
+        verifyToken();
+        setUser(getCurrentUser());
+    }, [])
+    
+    
+    
     const [product, setProduct] = useState(initialValue);
     const { valor, descripcion, estado } = product;
 

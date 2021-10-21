@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function Base() {
+export function Home() {
     return (
         <div>
             Bienvenidos al aplicativo

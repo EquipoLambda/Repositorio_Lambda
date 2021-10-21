@@ -3,6 +3,7 @@ import { Table, TableHead, TableCell, TableRow, TableBody, Button, makeStyles } 
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { getUsers} from '../services/UsersService';
 import { Link } from 'react-router-dom';
+import { getCurrentUser } from '../services/AuthService';
 
 const useStyles = makeStyles({
     table: {
@@ -42,10 +43,12 @@ const theme = createTheme({
 export function UserList() {
     const classes = useStyles();
 
+    const [user, setUser] = useState([])
     const [users, setUsers] = useState([])
 
     useEffect(() => {
         getAllUsers();
+        setUser(getCurrentUser());
     }, [])
 
     const getAllUsers = async () => {
