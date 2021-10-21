@@ -7,6 +7,10 @@ import { EditProduct } from './components/EditProduct';
 import { SaleList } from './components/SaleList';
 import { CreateSale } from './components/CreateSale';
 import { EditSale } from './components/EditSale';
+
+import { CreateRole } from './components/CreateRole';
+import { RoleList } from './components/RoleList';
+
 import {Login} from "./components/Login";
 import {Signup} from "./components/Signup";
 import {Logout} from "./components/Logout";
@@ -25,6 +29,12 @@ export function App() {
                 <Route exact path="/editProduct/:id" component={EditProduct} />
                 <Route exact path="/getSales" component={SaleList} />
                 <Route exact path="/addSale" component={CreateSale} />
+                
+                <Route exact path="/getRoles" component={RoleList} />
+                <Route exact path="/addRole" component={CreateRole} />
+                
+                
+
                 <Route exact path="/editSale/:id" component={EditSale} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/registrarse" component={Signup} />

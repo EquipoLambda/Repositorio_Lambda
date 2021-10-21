@@ -54,6 +54,10 @@ export function NavBar() {
                         <NavLink className={classes.tabs} to="/addProduct">Crear Producto</NavLink>
                         <NavLink className={classes.tabs} to="/getSales">Listar Ventas</NavLink>
                         <NavLink className={classes.tabs} to="/addSale">Crear Venta</NavLink>
+
+                        <NavLink className={classes.tabs} to="/getRoles">♦Listar Rol♦</NavLink>
+                        <NavLink className={classes.tabs} to="/addRole">•Crear Rol•</NavLink>
+
                     </Box>
                     <ThemeProvider theme={theme}>
                         <NavLink className={classes.tab_end} to="/registrarse">

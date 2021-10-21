@@ -52,3 +52,7 @@ app.use('/productos', routes.productsRouter);
 app.use('/ventas', routes.salesRouter);
 app.use('/usuarios', routes.usersRouter);
 app.use('/auth', routes.authRouter);
+
+app.use('/roles', routes.rolesRouter);
+
+
