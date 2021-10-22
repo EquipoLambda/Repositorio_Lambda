@@ -56,7 +56,7 @@ export function Signup() {
     
     const registerUser = async () => {
         await createUser(user);
-        history.push('/');
+        history.push('/login');
         //history.push('/getUsers');
     }
 
