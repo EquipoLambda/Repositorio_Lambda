@@ -58,7 +58,7 @@ export function Login() {
 
     return (
         <Paper className={classes.container} >
-        <Typography variant="h4">Inicia sesión</Typography>
+        <Typography variant="h4"> Inicia sesión  </Typography>
         <Grid container spacing={8} alignItems="flex-end">
             <Grid item md={true} sm={true} xs={true}>
                 <TextField value={email} name="email" onChange={(e) => onValueChange(e)} label="Email" type="email" fullWidth autoFocus required />

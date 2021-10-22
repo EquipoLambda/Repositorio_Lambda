@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import { NavBar } from './components/NavBar';
 import { ProductList } from './components/ProductList';
 import { CreateProduct } from './components/CreateProduct';
@@ -14,6 +14,7 @@ import { NotFound } from './components/NotFound';
 import { Base } from './components/Base';
 import { UserList } from './components/UserList';
 import { EditUser } from './components/EditUser';
+import  Preview from './components/Preview';
 import { getCurrentUser } from './services/AuthService';
 //import { getCurrentUser } from './services/AuthService';
 import './css/lambda.css';
@@ -27,7 +28,7 @@ export function App() {
 
     return (
         <BrowserRouter>
-            {user ? <NavBar /> : <Login  />}
+            {user ? <NavBar /> : <Preview />}
             <Switch>
                 
             <Route exact path="/" component={Base} />

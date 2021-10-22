@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { makeStyles, Button, Typography } from '@material-ui/core';
 import { createUser } from '../services/UsersService';
 import { useHistory } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
 import { FormGroup, FormControl, InputLabel, Input, } from '@material-ui/core';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 
@@ -89,6 +89,10 @@ export function Signup() {
             <FormControl>
             <Button variant="contained" onClick={() => Cancel()} color="secondary" className={classes.buttonEdit}>Cancelar</Button>
             </FormControl>
+            <Button  onClick color="secondary" style={{ textTransform: "none" }} > <NavLink to ="login"> Ya tienes cuenta? Inicia Sesion </NavLink>
+                
+                </Button> 
+
             </ThemeProvider>
             </FormGroup>
                   
