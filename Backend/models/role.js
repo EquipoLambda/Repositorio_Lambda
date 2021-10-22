@@ -3,9 +3,10 @@ const Schema = mongoose.Schema;
 
 const RoleSchema = Schema({
         
-    idUsuario: Number,
+    IdUsuario:Number,
     nombreUsuario: String,
-    rol: Boolean
+    rol: Boolean,
+    estado: Boolean
 
 })
 

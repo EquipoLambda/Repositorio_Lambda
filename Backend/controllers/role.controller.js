@@ -80,9 +80,10 @@ const updateRole = async (req, res) => {
     try {
         let newRole = {
             id: req.params.id,  
-            idUsuario:req.body.idUsuario,                    
+            IdUsuario:req.body.IdUsuario,                    
             nombreUsuario:req.body.nombreUsuario,
-            rol:req.body.rol            
+            rol:req.body.rol, 
+            estado: req.body.estado          
         }
         await RoleSchema.findByIdAndUpdate(req.params.id, newRole);
         res.status(201).json({ data: newRole })
