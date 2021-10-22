@@ -26,6 +26,19 @@ export function App() {
           setUsuario(usuarioFirebase);
         });
       }, []);
+
+/*       const [user, setUser] = React.useState(null);
+
+  useEffect(() => {
+    fb.auth().onAuthStateChanged((user) => {
+      if (user) {
+        setUser(user.email)
+        console.log("estas logueado")
+      } else {
+        console.log("no logueado")
+      }
+    })
+  }, []) */
     return (
         <BrowserRouter>
             

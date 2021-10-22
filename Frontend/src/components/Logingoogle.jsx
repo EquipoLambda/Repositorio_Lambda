@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 /* import { NavLink } from "react-router-dom"; */
 import { fb } from "../config/firebase";
 
@@ -41,6 +41,39 @@ export  const Logingoogle= (props) => {
     }
   };
 
+
+  
+/*   const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        setUser(user.email)
+        console.log("estas logueado")
+      } else {
+        console.log("no logueado")
+      }
+    })
+  }, [])
+ */
+/*   const provider = new firebase.auth.GoogleAuthProvider();
+  const signInWithGoogle = () => {
+    firebase.auth().signInWithPopup(provider)
+    .then((result) => {
+      console.log("estoy logeado con google")
+    }).catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      const credential = error.credential
+      console.log(`error en login errorCode:${errorCode}, msg:${errorMessage}`)
+    });
+} */
+/* const signOut = () => {
+  firebase.auth().signOut();
+} */
+
+
+
   return (
     <div>
       <h1> {isRegistrando ? "Regístrate" : "Inicia sesión"}</h1>
@@ -59,6 +92,16 @@ export  const Logingoogle= (props) => {
           ? "¿Ya tienes cuenta? ¡Inicia sesión"
           : "¿No tienes cuenta? ¡Regístrate gratis!"}
       </button>
+      <button> google </button>
+     {/*  { user ? (
+          <div>
+            {user}
+            <button onClick={signOut}> Logout </button>
+          </div>
+      ):
+      (
+        <button onClick={signInWithGoogle}> google </button>
+      )}: */}
     </div>
   );
 };
