@@ -10,7 +10,8 @@ const initialValue = {
     fullName: '',
     email: '',
     //password:'',
-    estado:true
+    estado: true,
+    rol:true
 }
 
 const useStyles = makeStyles({
@@ -41,7 +42,7 @@ const theme = createTheme({
 
 export function EditUser() {
     const [users, setUser] = useState(initialValue);
-    const { fullName, email, estado } = users;
+    const { fullName, email, estado, rol } = users;
     const classes = useStyles();
     let history = useHistory();
 
@@ -66,6 +67,10 @@ export function EditUser() {
         setUser({ ...users, "estado": state });
     }
     
+    const onStateChange2 = (state) => {
+        setUser({ ...users, "rol": state });
+    }
+
     const updateUserData = async () => {
         await editUser(users);
         history.push('/getUsers');
@@ -100,6 +105,22 @@ export function EditUser() {
                     <FormControlLabel value="noActivo" control={<Radio />} label="Inactivo" />
                 </RadioGroup>
             </FormControl>
+
+            
+            <FormControl component="fieldset">
+                <FormLabel component="legend">Rol</FormLabel>
+                <RadioGroup
+                    name='rol'
+                    onChange={(e) => onStateChange2(e.target.value === "Vendedor")}
+                    aria-label="rol"
+                    defaultValue="Vendedor"
+                    value={rol ? "Vendedor" : "Administrador"}>
+                    <FormControlLabel value="Vendedor" control={<Radio />} label="Vendedor" />
+                    <FormControlLabel value="Administrador" control={<Radio />} label="Administrador" />
+                </RadioGroup>
+            </FormControl>
+
+
             <ThemeProvider theme={theme}>
             <FormControl>
                 <Button variant="contained" onClick={(e) => updateUserData()} color="primary">Editar Usuario</Button>

@@ -28,6 +28,10 @@ const UserSchema = Schema({
     estado: {
         type: Boolean,
         default: true
+    },
+    rol: {
+        type: Boolean,
+        default: true
     }
 })
 

@@ -97,7 +97,8 @@ const updateUser = async (req, res) => {
             fullName: req.body.fullName,
             email: req.body.email,
             password: req.body.password,
-            estado: req.body.estado
+            estado: req.body.estado,
+            rol: req.body.rol
         }
         await UserSchema.findByIdAndUpdate(req.params.id, newUser);
         return res.status(201).json({ data: newUser })

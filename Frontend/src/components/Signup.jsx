@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { makeStyles, Button, Typography } from '@material-ui/core';
+import { makeStyles, Button, Typography, FormLabel, RadioGroup, Radio, FormControlLabel  } from '@material-ui/core';
 import { createUser } from '../services/UsersService';
 import { useHistory } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
@@ -7,10 +7,13 @@ import { FormGroup, FormControl, InputLabel, Input, } from '@material-ui/core';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 
 
+
+
 const initialValue = {
     fullName: '',
     email: '', 
-    password: ''
+    password: '',
+    rol:true
 }
 
 
@@ -44,7 +47,7 @@ const theme = createTheme({
 
 export function Signup() {
     const [user, setNewUser] = useState(initialValue);
-    const { fullName, email, password } = user;
+    const { fullName, email, password, rol } = user;
 
     const classes = useStyles();
     let history = useHistory();
@@ -54,6 +57,11 @@ export function Signup() {
     }
 
     
+    const onStateChange = (state) => {
+        setNewUser({ ...user, "rol": state });
+    }   
+
+
     const registerUser = async () => {
         await createUser(user);
         history.push('/login');
@@ -81,10 +89,24 @@ export function Signup() {
                 <InputLabel htmlFor="my-input">Password</InputLabel>
                 <Input onChange={(e) => onValueChange(e)} name="password" value={password} id="my-input" type="password"  />
             </FormControl>
+            
+            <FormControl component="fieldset">
+                <FormLabel component="legend">Rol</FormLabel>
+                <RadioGroup
+                    name='rol'
+                    onChange={(e) => onStateChange(e.target.value === "Vendedor")}
+                    aria-label="rol"
+                    defaultValue="Vendedor"
+                    value={rol ? "Vendedor" : "Administrador"}>
+                    <FormControlLabel value="Vendedor" control={<Radio />} label="Vendedor" />
+                    <FormControlLabel value="Administrador" control={<Radio />} label="Administrador" />
+                </RadioGroup>
+            </FormControl>
+
+            
             <ThemeProvider theme={theme}>
             <FormControl>
                 <Button variant="contained" onClick={(e) => registerUser()} color="primary" className={classes.buttonEdit}>Registrarse</Button>
-               
             </FormControl>
             <FormControl>
             <Button variant="contained" onClick={() => Cancel()} color="secondary" className={classes.buttonEdit}>Cancelar</Button>
