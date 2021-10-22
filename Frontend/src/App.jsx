@@ -27,12 +27,13 @@ export function App() {
 
     return (
         <BrowserRouter>
-            <NavBar />
+            {user ? <NavBar /> : <Login  />}
             <Switch>
-                <Route exact path="/" component={Base} />
-                <Route exact path="/getProducts" component={ProductList} />
+                
+            <Route exact path="/" component={Base} />
                 {user && (
                      <>
+                    <Route exact path="/getProducts" component={ProductList} />
                     <Route exact path="/addProduct" component={CreateProduct} />
                     <Route exact path="/editProduct/:id" component={EditProduct} />
                     <Route exact path="/getSales" component={SaleList} />

@@ -56,7 +56,7 @@ export function Signup() {
     
     const registerUser = async () => {
         await createUser(user);
-        history.push('/login');
+        history.push('/');
         //history.push('/getUsers');
     }
 
@@ -68,7 +68,7 @@ export function Signup() {
 
     return (
         <FormGroup className={classes.container} >
-            <Typography variant="h4">Registrase</Typography>
+            <Typography variant="h4">Registrarse</Typography>
             <FormControl>
                 <InputLabel htmlFor="my-input">Nombre Completo</InputLabel>
                 <Input onChange={(e) => onValueChange(e)} name="fullName" value={fullName} id="my-input" />

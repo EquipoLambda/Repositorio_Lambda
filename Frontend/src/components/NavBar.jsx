@@ -102,7 +102,7 @@ export function NavBar() {
                     onClose = {handleClose}
                     >
 
-                <MenuItem onClick={handleClose} className={classes.header}> <NavLink className={classes.tabs2} to="/">Inicio</NavLink></MenuItem>   
+                <MenuItem onClick={handleClose} className={classes.header}> <NavLink className={classes.tabs2} to="/home">Inicio</NavLink></MenuItem>   
                 <MenuItem onClick={handleClose} className={classes.header}> <NavLink className={classes.tabs2} to="/getProducts">Listar Producto</NavLink></MenuItem> 
                 <MenuItem onClick={handleClose} className={classes.header}> <NavLink className={classes.tabs2} to="/addProduct">Crear Producto</NavLink></MenuItem> 
                 <MenuItem onClick={handleClose} className={classes.header}> <NavLink className={classes.tabs2} to="/getSales">Listar Ventas</NavLink></MenuItem> 
@@ -114,17 +114,6 @@ export function NavBar() {
                    
                
                     <ThemeProvider theme={theme} >
-                        <NavLink className={classes.tab_end} to="/registrarse">
-                            <Button color="secondary" >registrarse</Button>
-                        </NavLink>
-                        <NavLink className={classes.tab_end} to="/login">
-                            <Button color="secondary">
-                                Login
-                            </Button>
-                        </NavLink>
-                        
-                    </ThemeProvider>
-
                     {user && (
                         <>
                             <Button className={classes.tab_end} >
@@ -137,11 +126,15 @@ export function NavBar() {
                                     <ListItemText primary={user.email} />
                                 </ListItem>
                             </Button>
-                            <Button variant="contained" onClick={() => logout()} color="secondary">
+                            <Button color="secondary" variant="contained" onClick={() => logout()} >
                                 Logout
                             </Button>
                         </>
                     )}
+                        
+                    </ThemeProvider>
+
+                   
 
 
                 </Toolbar>

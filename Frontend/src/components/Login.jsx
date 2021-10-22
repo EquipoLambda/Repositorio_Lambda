@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Paper, Grid, TextField, makeStyles, Button, Typography } from '@material-ui/core';
 import { loginAuth } from '../services/AuthService';
-
-
+import {GoogleLogin} from 'react-google-login';
+import Icon from './Icon';
+import { NavLink } from 'react-router-dom';
 const useStyles = makeStyles({
     container: {
         width: '300px',
@@ -19,6 +20,7 @@ const initialValue = {
 
 export function Login() {
 
+   /*  const dispatch = useDispatch(); */
     const [credentials, setCredentials] = useState(initialValue)
 
     const {email, password} = credentials
@@ -38,6 +40,22 @@ export function Login() {
         }
     }
 
+    const googleSuccess = async (res) => {
+        console.log(res);
+       /*  const result = res?.profileObj;
+        const token = res?.tokenId;
+     */
+       /*  try {
+          dispatch({ type: 'AUTH', data: { result, token } });
+    
+          history.push('/');
+        } catch (error) {
+          console.log(error);
+        } */
+      };
+
+    const googleError = () => alert('Google Sign In was unsuccessful. Try again later');
+
     return (
         <Paper className={classes.container} >
         <Typography variant="h4">Inicia sesión</Typography>
@@ -52,7 +70,26 @@ export function Login() {
             </Grid>
         </Grid>
         <Grid container justify="center" style={{ marginTop: '10px' }}>
-            <Button variant="contained" onClick={() => startLogin()} color="primary" style={{ textTransform: "none" }}>Inicia sesión</Button>
+        
+            <Button variant="contained" onClick={() => startLogin()} color="primary" style={{ textTransform: "none" }}>  Inicia sesión </Button>
+            
+        </Grid>
+        <Grid container justify="center" style={{ marginTop: '10px' }}>
+            <GoogleLogin
+                clientId="379498501717-9trc9vgshpq53o04qh6u2ql2uvccagnn.apps.googleusercontent.com"
+                render={(renderProps) => (
+                    <Button  onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon={<Icon/>} variant="contained">  </Button>
+                )}
+                onSuccess={googleSuccess}
+                onFailure={googleError}
+                cookiePolicy="single_host_origin"
+            />
+        </Grid>
+        <Grid container justify="center" style={{ marginTop: '10px' }}>
+            
+            <Button  onClick color="secondary" style={{ textTransform: "none" }} > <NavLink to ="registrarse"> No tienes cuenta? Registrate</NavLink>
+                
+                 </Button> 
         </Grid>
     </Paper>
     )
