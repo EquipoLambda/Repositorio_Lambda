@@ -1,18 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FormGroup, FormControl, InputLabel, Input, Button, makeStyles, Typography, RadioGroup, FormLabel, FormControlLabel, Radio } from '@material-ui/core';
-import { addRole } from '../services/RoleService';
+import { editRole, getRole } from '../services/RoleService';
+import { useHistory, useParams } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
-import { useHistory } from 'react-router-dom';
 
-const initialValue = {        
+const initialValue = {
+    _id:'',
     IdUsuario: '',
     nombreUsuario:'',
-    rol: true, 
-    estado: true       
+    rol: true      
 }
 
 const useStyles = makeStyles({
-        container: {
+    container: {
         width: '50%',
         margin: '5% 0 0 25%',
         '& > *': {
@@ -25,7 +25,6 @@ const useStyles = makeStyles({
         }
     }
 });
-
 const theme = createTheme({
     palette: {
         primary: {
@@ -37,12 +36,23 @@ const theme = createTheme({
     },
 });
 
-export function CreateRole() {
-    const [role, setRole] = useState(initialValue);
-    const { IdUsuario,nombreUsuario,rol } = role;
 
+export function EditRole() {
+    const [role, setRole] = useState(initialValue);
+    const {_id, IdUsuario, nombreUsuario, rol } = role;
     const classes = useStyles();
     let history = useHistory();
+
+    const { id } = useParams();
+
+    useEffect(() => {
+        loadRoleData();
+    }, [])
+
+    const loadRoleData = async () => {
+        let response = await getRole(id);
+        setRole(response.data.data);
+    }
 
     const onValueChange = (e) => {
         setRole({ ...role, [e.target.name]: e.target.value });
@@ -52,8 +62,8 @@ export function CreateRole() {
         setRole({ ...rol, "rol": state });
     }
 
-    const addRoleData = async () => {
-        await addRole(role);
+    const updateRoleData = async () => {
+        await editRole(role);
         history.push('/getRoles');
     }
 
@@ -61,21 +71,23 @@ export function CreateRole() {
         history.push('/getRoles');
     }
 
-
     return (
         <FormGroup className={classes.container}>
-            <Typography variant="h4">Crear Rol</Typography>
+            <Typography variant="h4">Editar Rol</Typography>
             <FormControl>
-                <InputLabel htmlFor="my-input">Id Usuario</InputLabel>
+                <InputLabel htmlFor="my-input">Id</InputLabel>
+                <Input onChange={(e) => onValueChange(e)} name="_id" value={_id} id="my-input" readOnly/>
+            </FormControl>
+            <FormControl>
+                <InputLabel htmlFor="my-input">IdUsuario</InputLabel>
                 <Input onChange={(e) => onValueChange(e)} name="IdUsuario" value={IdUsuario} id="my-input" />
             </FormControl>
             <FormControl>
-                <InputLabel htmlFor="my-input">Nombre Usuario</InputLabel>
+                <InputLabel htmlFor="my-input">nombreUsuario</InputLabel>
                 <Input onChange={(e) => onValueChange(e)} name="nombreUsuario" value={nombreUsuario} id="my-input" />
-            </FormControl>            
-            
+            </FormControl>
             <FormControl component="fieldset">
-                <FormLabel component="legend">Rol</FormLabel>
+                <FormLabel component="legend">rol</FormLabel>
                 <RadioGroup
                     name='rol'
                     onChange={(e) => onStateChange(e.target.value === "Cliente")}
@@ -88,7 +100,7 @@ export function CreateRole() {
             </FormControl>
             <ThemeProvider theme={theme}>
             <FormControl>
-                <Button variant="contained" onClick={(e) => addRoleData()} color="primary" className={classes.buttonEdit}>Agregar Usuario</Button>
+                <Button variant="contained" onClick={(e) => updateRoleData()} color="primary">Editar Rol</Button>
             </FormControl>
             <FormControl>
             <Button variant="contained" onClick={() => Cancel()} color="secondary" className={classes.buttonEdit}>Cancelar</Button>

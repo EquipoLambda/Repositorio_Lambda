@@ -42,7 +42,7 @@ const theme = createTheme({
 export function RoleList() {
     const classes = useStyles();
 
-    const [roles, setRoles] = useState([])
+    const [role, setRoles] = useState([])
 
     useEffect(() => {
         getAllRoles();
@@ -67,11 +67,11 @@ export function RoleList() {
             </TableHead>
             <TableBody>
                 {
-                    roles.map(role => (
+                    role.map(role => (
                         <TableRow className={classes.row} key={role._id}>
-                            <TableCell align="center">{role._id}</TableCell>                            
+                            <TableCell align="center">{role.IdUsuario}</TableCell>                            
                             <TableCell align="center">{role.nombreUsuario}</TableCell>
-                            <TableCell align="center">{role.rol}</TableCell>
+                            <TableCell align="center">{role.rol ? "Cliente" : "Vendedor"}</TableCell>
                             <TableCell align="center">{role.estado ? "Activo" : "Inactivo"}</TableCell>
                             <TableCell>
                                 <ThemeProvider theme={theme}>

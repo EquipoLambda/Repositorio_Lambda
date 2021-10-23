@@ -13,15 +13,15 @@ router.post('/',
     body('IdUsuario', 'El numero de identificacion del usuario es requerido y debe ser numerico').exists().isNumeric(),
     body('nombreUsuario', 'El nombre de usuario es requerido').exists(),
     body('rol', 'el rol del usuario es requerido').isBoolean().exists(),
-    body('estado', 'El estado del usuario es requerido(true/false)').isBoolean().exists()
-    , rolesController.createRole);
+    
+    rolesController.createRole);
 
 router.put('/:id',
     body('IdUsuario', 'El numero de identificacion del usuario es requerido y debe ser numerico').exists().isNumeric(),
     body('nombreUsuario', 'El nombre de usuario es requerido').exists(),
     body('rol', 'el rol del usuario es requerido').isBoolean().exists(),
-    body('estado', 'El estado del usuario es requerido(true/false)').isBoolean().exists()
-    , rolesController.updateRole);
+    
+    rolesController.updateRole);
 
 router.delete('/:id', rolesController.deleteRole);
 

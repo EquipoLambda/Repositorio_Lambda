@@ -10,6 +10,7 @@ import { EditSale } from './components/EditSale';
 
 import { CreateRole } from './components/CreateRole';
 import { RoleList } from './components/RoleList';
+import { EditRole } from './components/EditRole';
 
 import {Login} from "./components/Login";
 import {Signup} from "./components/Signup";
@@ -32,7 +33,7 @@ export function App() {
                 
                 <Route exact path="/getRoles" component={RoleList} />
                 <Route exact path="/addRole" component={CreateRole} />
-                
+                <Route exact path="/editRole/:id" component={EditRole} />
                 
 
                 <Route exact path="/editSale/:id" component={EditSale} />
