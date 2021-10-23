@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Table, TableHead, TableCell, TableRow, TableBody, Button, makeStyles } from '@material-ui/core';
 import { getSale, deleteSale } from '../services/SaleService';
-import { Link,useHistory, useParams  } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import { getCurrentUser } from '../services/AuthService';
 
 const initialValue = {
@@ -59,13 +59,16 @@ export function SaleDetail() {
         let response = await getSale(id);
         setSale(response.data.data);
     }
-    
-    const deleteSaleData = async (id) =>{
+
+    const deleteSaleData = async (id) => {
         let callbackUser = window.confirm('Esta seguro de eliminar la venta');
         if (callbackUser) {
             await deleteSale(id);
             history.push('/ventas')
         }
+    }
+    const Cancel = () => {
+        history.push('/getSales');
     }
 
     return (
@@ -78,12 +81,13 @@ export function SaleDetail() {
                         <TableCell>Id Cliente: {sale.idCliente}</TableCell>
                         <TableCell>Nombre Cliente: {sale.nombreCliente}</TableCell>
                         <TableCell>Id Vendedor: {sale.idVendedor}</TableCell>
-                        {/* {user && (
+                        {user && (
                             <TableCell className={classes.button_add}>
-                                <Button className={classes.button} variant="contained" component={Link} to={`editSale/${sale._id}`} color="primary">Editar</Button>
-                                <Button variant="contained" color="info" onClick={() => deleteSaleData(sale._id)} >Eliminar</Button>
+                                <Button variant="contained" onClick={() => Cancel()} color="primary">Cancelar</Button>
+                                {/* <Button className={classes.button} variant="contained" component={Link} to={`editSale/${sale._id}`} color="primary">Editar</Button> */}
+                                {/* <Button variant="contained" color="info" onClick={() => deleteSaleData(sale._id)} >Eliminar</Button> */}
                             </TableCell>
-                        )} */}
+                        )}
                     </TableRow>
                 </TableHead>
             </Table>
@@ -96,7 +100,7 @@ export function SaleDetail() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                {
+                    {
                         sale.productos.map(product => (
                             <TableRow className={classes.row} key={product._id}>
                                 <TableCell>{product._id}</TableCell>

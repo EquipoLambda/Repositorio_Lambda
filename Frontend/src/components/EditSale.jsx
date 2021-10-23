@@ -143,6 +143,9 @@ export function EditSale() {
     const changeStateCreateProductForm = (state) => {
         setCreatingProductState(state);
     }
+    const Cancel = () => {
+        history.push('/getSales');
+    }
 
 
     return (
@@ -256,6 +259,9 @@ export function EditSale() {
                 </Table>
                 <FormControl>
                     <Button variant="contained" onClick={() => editSaleData()} color="primary">Editar Venta</Button>
+                </FormControl>
+                <FormControl>
+                    <Button variant="contained" onClick={() => Cancel()} color="secondary">Cancelar</Button>
                 </FormControl>
             </FormGroup>
         </>
