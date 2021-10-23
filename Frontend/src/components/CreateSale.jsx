@@ -133,6 +133,9 @@ export function CreateSale() {
         setCreatingProductState(state);
     }
 
+    const Cancel = () => {
+        history.push('/getSales');
+    }
 
     return (
         <>
@@ -241,6 +244,9 @@ export function CreateSale() {
                 </Table>
                 <FormControl>
                     <Button variant="contained" onClick={(e) => addSaleData()} color="primary">Agregar Venta</Button>
+                </FormControl>
+                <FormControl>
+                    <Button variant="contained" onClick={() => Cancel()} color="secondary">Cancelar</Button>
                 </FormControl>
             </FormGroup>
         </>
