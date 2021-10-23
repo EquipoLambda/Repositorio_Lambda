@@ -34,7 +34,6 @@ const SaleSchema = Schema({
         require: true
     },
     productos: [ProductSaleDetailSchema],
-    estado: Boolean,
     fecha: {
         type: Date,
         default: Date.now

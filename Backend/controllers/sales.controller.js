@@ -1,4 +1,5 @@
 const SaleSchema = require('../models/sale');
+const ProductSchema = require('../models/product');
 const { validationResult } = require('express-validator');
 
 const getSale = async (req, res) => {
@@ -11,7 +12,7 @@ const getSale = async (req, res) => {
             res.status(404).json({
                 error: {
                     code: 404,
-                    message: "Saleo no encontrado"
+                    message: "Venta no encontrado"
                 }
             })
         }
@@ -52,6 +53,28 @@ const createSale = async (req, res) => {
             }
         });
     }
+
+    req.body.productos.forEach(async(element) => {
+        if(mongoose.Types.ObjectId.isValid(element._id)){
+            let product = await ProductSchema.findById(element._id);
+            if(!product) {
+                return res.status(400).json({
+                    error: {
+                        code: 404,
+                        message: `Producto con id:${element._id} no existe`
+                    }
+                })
+            }
+        }else{
+            return res.status(400).json({
+                error: {
+                    code: 404,
+                    message: `Producto con id:${element._id} no existe`
+                }
+            })
+        }
+    }); 
+
     let sale = new SaleSchema(req.body);
     try {
         await sale.save();
@@ -81,9 +104,7 @@ const updateSale = async (req, res) => {
         let newSale = {
             id: req.params.id,
             valor: req.body.valor,
-            idCliente:req.body.idCliente,
-            nombreCliente:req.body.nombreCliente,
-            idVendedor:req.body.idVendedor,
+            descripcion: req.body.descripcion,
             estado: req.body.estado
         }
         await SaleSchema.findByIdAndUpdate(req.params.id, newSale);
@@ -110,7 +131,7 @@ const deleteSale = async (req, res) => {
             res.status(404).json({
                 error: {
                     code: 404,
-                    message: "Saleo no encontrado"
+                    message: "Venta no encontrado"
                 }
             })
         }

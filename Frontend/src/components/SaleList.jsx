@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Table, TableHead, TableCell, TableRow, TableBody, Button, makeStyles } from '@material-ui/core';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
-import { getSales} from '../services/SaleService';
+import { getSales,deleteSale} from '../services/SaleService';
 import { Link } from 'react-router-dom';
+import { getCurrentUser } from '../services/AuthService';
 
 const useStyles = makeStyles({
     table: {
@@ -20,6 +21,12 @@ const useStyles = makeStyles({
         '& > *': {
             fontSize: 18
         }
+    },    
+    button: {
+        marginInline: '20px'
+    },
+    button_add: {
+        textAlign: "right"
     },
     buttonEdit: {
         '& > *': {
@@ -42,17 +49,27 @@ const theme = createTheme({
 export function SaleList() {
     const classes = useStyles();
 
-    const [sales, setSales] = useState([])
+    const [user, setUser] = useState([]);
+    const [sales, setSales] = useState([]);
 
     useEffect(() => {
-        getAllSales();
+        loadSalesData();
+        setUser(getCurrentUser());
     }, [])
 
-    const getAllSales = async () => {
+    const loadSalesData = async () =>{
         let response = await getSales();
-        console.log(response);
         setSales(response.data.data);
     }
+
+    const deleteSaleData = async (id) =>{
+        let callbackUser = window.confirm('Esta seguro de eliminar la venta');
+        if (callbackUser) {
+            await deleteSale(id);
+            loadSalesData();
+        }
+    }
+
 
     return (
         <Table className={classes.table}>
@@ -61,9 +78,14 @@ export function SaleList() {
                     <TableCell align="center">Id</TableCell>
                     <TableCell align="center">Valor</TableCell>
                     <TableCell align="center">Nombre Cliente</TableCell>
+                    <TableCell align="center">Id Vendedor</TableCell>
                     <TableCell align="center">Fecha</TableCell>
-                    <TableCell align="center">Estado</TableCell>
                     <TableCell></TableCell>
+                    {/* {user && (
+                            <TableCell className={classes.button_add}>
+                                <Button variant="contained" color="primary" component={Link} to="ventas/agregar" >Agregar</Button>
+                            </TableCell>
+                        )} */}
                 </TableRow>
             </TableHead>
             <TableBody>
@@ -73,13 +95,17 @@ export function SaleList() {
                             <TableCell align="center">{sale._id}</TableCell>
                             <TableCell align="center">{sale.valor}</TableCell>
                             <TableCell align="center">{sale.nombreCliente}</TableCell>
+                            <TableCell align="center">{sale.idVendedor}</TableCell>
                             <TableCell align="center">{sale.fecha}</TableCell>
-                            <TableCell align="center">{sale.estado ? "Disponible" : "Agotado"}</TableCell>
-                            <TableCell>
-                                <ThemeProvider theme={theme}>
-                                    <Button variant="contained" component={Link} to={`/editSale/${sale._id}`} color="primary" className={classes.buttonEdit}>Editar</Button>
-                                </ThemeProvider>
-                            </TableCell>
+                            {user
+                                    &&
+
+                                    (<TableCell>
+                                        <Button className={classes.button} variant="contained" component={Link} to={`sales/detalle/${sale._id}`} color="primary">Detalle</Button>
+                                        <Button className={classes.button} variant="contained" component={Link} to={`editSale/${sale._id}`} color="info">Editar</Button>
+                                        <Button variant="contained" color="secondary" onClick={() => deleteSaleData(sale._id)} >Eliminar</Button>
+                                    </TableCell>)
+                                }
                         </TableRow>
                     ))
                 }

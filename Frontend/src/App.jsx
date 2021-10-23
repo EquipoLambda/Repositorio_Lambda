@@ -7,6 +7,7 @@ import { EditProduct } from './components/EditProduct';
 import { SaleList } from './components/SaleList';
 import { CreateSale } from './components/CreateSale';
 import { EditSale } from './components/EditSale';
+import { SaleDetail } from './components/SaleDetail';
 import {Login} from "./components/Login";
 import {Signup} from "./components/Signup";
 import {Logout} from "./components/Logout";
@@ -40,6 +41,7 @@ export function App() {
                     <Route exact path="/getSales" component={SaleList} />
                     <Route exact path="/addSale" component={CreateSale} />
                     <Route exact path="/editSale/:id" component={EditSale} />
+                    <Route exact path="/sales/detalle/:id" component={SaleDetail} />
                     <Route exact path="/getUsers" component={UserList} />
                     <Route exact path="/editUser/:id" component={EditUser} />
                     </>
