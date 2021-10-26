@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const salesUrl = "http://localhost:3002/ventas";
+const salesUrl = "https://calm-beyond-00632.herokuapp.com/ventas";
+//const salesUrl = "http://localhost:3002/ventas";
+
+
 
 export const getSale = async (id) => {
     return await axios.get(`${salesUrl}/${id}`);
