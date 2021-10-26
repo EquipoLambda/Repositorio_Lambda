@@ -21,18 +21,37 @@ const useStyles = makeStyles({
             color: '#ffffff'
         }
     },
+    
     buscar: {
         '& > *': {
-            width: '150%',
-            margin: '10px 0 0 1300px',
-            fontSize: 20,
-            background: '#5c1e17',
-            paddingTop: 10,
-            
-            marginRight: 10,
-            color: '#FFFFFF'  
+            position: 'absolute',
+            width: '1200px',
+            height: '40px',
+            padding: '0 1px',
+            color: '#000000',
+            outline: 'none',
+            border: '1px solid #000000',
+            top: '5px',
+            right: '-640px',
+
         }
     },
+    btn: {
+        '& > *': {
+             
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '390px',
+            height: '50px',
+            lineHeight: '40',
+            textAlign: 'center',
+            color: 'black',
+            fontSize: '20px',
+            cursor: 'pointer'
+
+        }
+    },
+   
     row: {
         '& > *': {
             fontSize: 18
@@ -86,6 +105,7 @@ export function UserList() {
 
     
         const filtrar=(terminoBusqueda)=>{
+            // eslint-disable-next-line array-callback-return
             var resultadosBusqueda=tablaUsuarios.filter((elemento)=>{
               if(elemento.fullName.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
               || elemento.email.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
@@ -102,13 +122,14 @@ export function UserList() {
         
         
         <div >
-        <div >
+            
+        <div className={classes.btn}>
+            <SearchIcon  />
             <InputBase className={classes.buscar} 
             placeholder="Buscar Nombre o Email"
             value={busqueda}
             onChange={handleChange}
             />
-            <SearchIcon />
         </div>  
        
          
