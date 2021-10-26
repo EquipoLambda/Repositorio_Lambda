@@ -5,6 +5,10 @@ import { getUsers} from '../services/UsersService';
 import { Link } from 'react-router-dom';
 import { getCurrentUser } from '../services/AuthService';
 
+
+import InputBase from '@material-ui/core/InputBase';
+import SearchIcon from '@material-ui/icons/Search';
+
 const useStyles = makeStyles({
     table: {
         width: '90%',
@@ -15,6 +19,18 @@ const useStyles = makeStyles({
             fontSize: 20,
             background: '#5c1e17',
             color: '#ffffff'
+        }
+    },
+    buscar: {
+        '& > *': {
+            width: '150%',
+            margin: '10px 0 0 1300px',
+            fontSize: 20,
+            background: '#5c1e17',
+            paddingTop: 10,
+            
+            marginRight: 10,
+            color: '#FFFFFF'  
         }
     },
     row: {
@@ -40,12 +56,17 @@ const theme = createTheme({
     },
 });
 
+
+
+
 export function UserList() {
     const classes = useStyles();
 
     const [user, setUser] = useState([])
     const [users, setUsers] = useState([])
-
+    const[tablaUsuarios, setTablaUsusarios] = useState([])
+    const [busqueda, setBusqueda]= useState("")
+ 
     useEffect(() => {
         getAllUsers();
         setUser(getCurrentUser());
@@ -55,9 +76,43 @@ export function UserList() {
         let response = await getUsers();
         console.log(response);
         setUsers(response.data.data);
+        setTablaUsusarios(response.data.data);
     }
 
+    const handleChange=e=>{
+        setBusqueda(e.target.value);
+        filtrar(e.target.value);
+    }
+
+    
+        const filtrar=(terminoBusqueda)=>{
+            var resultadosBusqueda=tablaUsuarios.filter((elemento)=>{
+              if(elemento.fullName.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+              || elemento.email.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+              ){
+                return elemento;
+              }
+            });
+            setUsers(resultadosBusqueda);
+          }
+
+
+
     return (
+        
+        
+        <div >
+        <div >
+            <InputBase className={classes.buscar} 
+            placeholder="Buscar Nombre o Email"
+            value={busqueda}
+            onChange={handleChange}
+            />
+            <SearchIcon />
+        </div>  
+       
+         
+
         <Table className={classes.table}>
             <TableHead>
                 <TableRow className={classes.thead}>
@@ -86,5 +141,6 @@ export function UserList() {
                 }
             </TableBody>
         </Table>
+        </div>
     )
 }
