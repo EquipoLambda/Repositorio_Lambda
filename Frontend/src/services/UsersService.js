@@ -1,7 +1,9 @@
 import axios from "axios";
 import { authHeaders } from "./AuthService";
 
-const usersUrl = "http://localhost:3002/usuarios";
+const usersUrl = "https://calm-beyond-00632.herokuapp.com/usuarios";
+//const usersUrl = "http://localhost:3002/usuarios";
+
 
 export const createUser = async (user) => {
     return await axios.post(`${usersUrl}/`, user, { headers: authHeaders });

@@ -1,7 +1,8 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 
-const authUrl = "http://localhost:3002/auth";
+const authUrl = "https://calm-beyond-00632.herokuapp.com/auth";
+//const authUrl = "http://localhost:3002/auth";
 
 
 export const authHeaders = {
